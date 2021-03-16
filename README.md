@@ -1,2 +1,2 @@
 # Blogs
-This is my blog!
+This is my blog: https://trandongxyz.github.io/Blogs/
