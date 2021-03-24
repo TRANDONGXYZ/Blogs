@@ -1,17 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
 main {
     margin-top: 10vh;
     margin-left: 15%;
     margin-right: 15%;
     font-family: "Poppins", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.header {
+h1 {
     text-align: center;
+    font-size: 40px;
 }
 
-.title {
+.subtitle {
     margin-top: 60px;
+    font-size: 25px;
 }
 
 ul {
@@ -28,5 +37,4 @@ ul {
 
 .content {
     text-align: justify;
-    font-size: 20px;
 }
