@@ -43,10 +43,6 @@ main {
     font-size: 25px;
 }
 
-.blank {
-    height: 100px;
-}
-
 .item:hover {
     cursor: pointer;
     transform: translateY(-10px);

@@ -37,11 +37,14 @@ nav {
 a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
   display: inline-block;
   transition: transform 0.2s;
 }
 
-a:hover {
+.nav-link:hover {
   transform: translateY(-5px);
 }
 

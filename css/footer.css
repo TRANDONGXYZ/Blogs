@@ -21,3 +21,7 @@ footer {
     display: flex;
     align-items: center;
 }
+
+.blank {
+    height: 100px;
+}
