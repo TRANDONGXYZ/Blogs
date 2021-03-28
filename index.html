@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/categories.css">
     <link rel="stylesheet" href="./css/footer.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,13 +23,13 @@
         <nav>
             <a href="./index.html">
                 <div class="logo">
-                <p class="name">Website<span class="bold">Learners</span></p>
-                <img src="./img/logo.png" alt="Logo" class="img-logo">
-            </div>
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="./img/logo.png" alt="Logo" class="img-logo">
+                </div>
             </a>
 
             <ul class="nav-links">
-                <li><a href="./Content/Math/Math.html" class="nav-link">Math</a></li>
+                <li><a href="./Content/Math/Math.html" class="nav-link">Mathematics</a></li>
                 <li><a href="#" class="nav-link">Algorithm</a></li>
                 <li><a href="#" class="nav-link">Computer Science</a></li>
                 <li><a href="#" class="nav-link">Story</a></li>
@@ -38,93 +39,18 @@
     </header>
 
     <main>
-        <h1 class="title">PHÉP THỬ VÀ BIẾN CỐ</h1>
-
-        <h3 class="subtitle">GIỚI THIỆU</h3>
-        <div class="underline"></div>
-        <p class="content">
-            Phép thử và biến cố là các khái niệm cơ bản trong xác suất, ta cần phải nắm rõ chúng để phục vụ cho các bài
-            học sau này.
-        </p>
-
-        <h3 class="subtitle">PHÉP THỬ VÀ BIẾN CỐ</h3>
-        <div class="underline"></div>
-        <p class="content">
-            Trong thực tế khi ta muốn khảo sát 1 hiện tượng nào đó thì ta phải đáp ứng những yêu cầu cơ bản của hiện
-            tượng. Tức là nếu ta muốn khảo
-            sát 1 hiện tượng thì ta phải đáp ứng các điều kiện cơ bản trước. Việc thực hiện các điều kiện cơ bản để xem
-            xét hiện tượng có xảy ra hay
-            không được gọi là phép thử. Còn hiện tượng có thể xảy ra trong phép thử được gọi là biến cố.
-        </p>
-        <br>
-        <p class="content">
-            Ví dụ 1: Tung 1 con xúc xắc xuống đất được gọi là phép thử, còn việc xuất hiện mặt nào là biến cố. <br>
-            Ví dụ 2: Bắn phát súng vào bia. Việc bắn phát súng là phép thử, còn viên đạn trúng vào miền nào của bia là
-            biến cố.
-        </p>
-
-        <h3 class="subtitle">CÁC LOẠI BIẾN CỐ</h3>
-        <div class="underline"></div>
-        <p class="content">
-            Trong thực tế có thể xảy ra 3 loại biến cố sau đây:
-        <ul>
-            <li>
-                Biến cố chắc chắn: đây là biến cố chắc chắn sẽ xảy ra. Thường được ký hiệu là U. <br>
-                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt nhỏ hơn hoặc bằng 6 là biến cố chắc chắn.
-            </li>
-            <li>
-                Biến cố không thể có: đây là loại biến cố không bao giờ xảy ra. <br>
-                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt 7 là biến cố không thể có.
-            </li>
-            <li>
-                Biến cố ngẫu nhiên: đây là loại biến cố có thể xảy ra hoặc không xảy ra khi thực hiện 1 phép thử. Các
-                biến cố thường được
-                ký hiệu là A, B, C,... <br>
-                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt 1 chấm là biến cố ngẫu nhiên.
-            </li>
-        </ul>
-        Trong thực tế hầu hết các trường hợp mà ta gặp đều là biến cố ngẫu nhiên.
-        </p>
-
-        <h3 class="subtitle">KẾT LUẬN</h3>
-        <div class="underline"></div>
-        <p class="content">
-            <ul>
-                <li>Phép thử là việc ta thực hiện điều kiện cơ bản để sự kiện, hiện tượng xảy ra.</li>
-                <li>Biến cố là kết quả có thể xảy ra hoặc không xảy ra của 1 phép thử.</li>
-                <li>Trong thực tế có 3 loại biến cố: biến cố chắc chắn, biến cố không thể có, biến cố ngẫu nhiên.
-                    Trong đó biến cố ngẫu nhiên thường xuất hiện trong thực tế.
-                </li>
-            </ul>
-        </p>
+        <div class="container-categories">
+            <a href="./Content/Math/Math.html" class="item">
+                <img src="./img/mathematics.png" class="icon-categories">
+                <div class="info">
+                    <p class="title-categories">Mathematics</p>
+                </div>
+            </a>
+        </div>
     </main>
 
     <footer>
-        <div class="container-contact">
-            <div class="item">
-                <img src="./img/phone.jpg" alt="">
-                <div class="info">
-                    Phone <br>
-                    0123456789
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="./img/email.jpg" alt="">
-                <div class="info">
-                    Email <br>
-                    ba01@gmail.com
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="./img/address.jpg" alt="">
-                <div class="info">
-                    Address <br>
-                    University of Science
-                </div>
-            </div>
-        </div>
+        <div class="blank"></div>
     </footer>
 </body>
 

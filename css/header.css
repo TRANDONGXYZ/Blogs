@@ -49,8 +49,8 @@ a {
 }
 
 .nav-links {
-  width: 40%;
-  display: inline-flex;
+  width: 50%;
+  display: flex;
   list-style: none;
   justify-content: space-around;
 }

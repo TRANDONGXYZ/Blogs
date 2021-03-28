@@ -6,8 +6,8 @@
 }
 
 main {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 15px;
 }
 
@@ -22,8 +22,8 @@ main {
 }
 
 .item {
-    margin-top: 70px;
-    width: 300px;
+    margin-top: 35px;
+    width: 330px;
     height: 200px;
     border: 4px blue solid;
     border-radius: 30px;
@@ -39,7 +39,7 @@ main {
 }
 
 .title-categories {
-    margin-left: 10px;
+    margin: 10px;
     font-size: 25px;
 }
 
