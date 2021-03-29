@@ -42,3 +42,12 @@ ul {
 .written {
     font-size: 16px;
 }
+
+.formula {
+    text-align: center;
+}
+
+.img-formula {
+    border: 4px red solid;
+    border-radius: 15px;
+}

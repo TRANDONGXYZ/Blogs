@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../../css/header.css">
+    <link rel="stylesheet" href="../../../../css/content.css">
+    <link rel="stylesheet" href="../../../../css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Định Nghĩa Cổ Điển Về Xác Suất</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../../../index.html">
+                <div class="logo">
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="../../../../img/logo.png" alt="Logo" class="img-logo">
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../Math.html" class="nav-link">Mathematics</a></li>
+                <li><a href="#" class="nav-link">Algorithm</a></li>
+                <li><a href="#" class="nav-link">Computer Science</a></li>
+                <li><a href="#" class="nav-link">Story</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p class="written"><i>Ngày viết: 25/03/2021 - 12:23</i></p> <br>
+        <h1 class="title">ĐỊNH NGHĨA CỔ ĐIỂN VỀ XÁC SUẤT</h1>
+        <h3 class="subtitle">GIỚI THIỆU</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trong bài học trước chúng ta đã tìm hiểu về khái niệm xác suất của 1 biến cố là gì. Trong bài học
+            này chúng ta sẽ tìm hiểu làm thế nào để tính được xác suất theo quan điểm cổ điển. Đã nói là cổ điển
+            thì chắc hẳn là phải có những quan điểm khác hiện đại hơn (và thật sự là có) nhưng tại sao ta lại
+            không học những quan điểm mới hơn mà lại phải học theo quan điểm cổ điển để làm gì?
+        </p>
+        <br>
+        <p class="content">
+            Xác suất theo quan điểm cổ điển là nền móng cho các loại xác suất hiện đại khác nên chúng ta cần phải
+            có "móng" thật tốt trước đã rồi mới học những thứ khác được. Với lại thông qua xác suất cổ điển này thì
+            các bạn có thể hiểu tại sao phải có thêm các loại xác suất khác.
+        </p>
+        <br>
+        <p class="content">
+            OK giới thiệu thế đủ rồi. Bắt đầu thôi!
+        </p>
+
+        <h3 class="subtitle">ĐỊNH NGHĨA</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Không gì tốt hơn là cho 1 ví dụ. Giả sử ta thực hiện 1 phép thử là tung 1 con xúc xắc đều đặn và đồng chất.
+            Gọi <strong>A</strong> là biến cố "Xuất hiện mặt chẵn chấm". Ta cần phải xác định xác suất xảy ra của biến
+            cố <strong>A</strong>.
+        </p>
+        <br>
+        <p class="content">
+            Khi tung 1 con xúc xắc đều đặn và đồng chất, ta thấy có các trường hợp sau có thể xảy ra: xuất hiện mặt 1
+            chấm, xuất hiện mặt 2 chấm,..., xuất hiện mặt 6 chấm. Những trường hợp này đều thỏa mãn 2 điều kiện:
+        <ul>
+            <li>
+                Chúng là duy nhất. Tức là trong kết quả của phép thử chỉ có thể xảy ra một và chỉ một trong các trường
+                hợp đó.
+            </li>
+            <li>
+                Những trường hợp trên có khả năng xảy ra là như nhau.
+            </li>
+        </ul>
+            Các trường hợp thỏa mãn 2 điều kiện nói trên được gọi là các trường hợp (kết cục) duy nhất đồng khả năng.
+        </p>
+        <br>
+        <p class="content">
+            Trong số 6 kết cục duy nhất đồng khả năng đó ta thấy chỉ có 3 kết cục nếu xảy ra thì biến cố <strong>A</strong>
+            sẽ xảy ra là: xuất hiện mặt 2 chấm, 4 chấm và 6 chấm. Những kết cục làm cho biến cố xảy ra được gọi là kết cục
+            thuận lợi cho biến cố.
+        </p>
+        <br>
+        <p class="content">
+            Như vậy khi nhìn một cách trực quan ta có thể thấy khả năng xảy ra của biến cố A là 3/6 tức là 1/2. Và đó cũng
+            chính là định nghĩa cổ điển của xác suất.
+        </p>
+        <br>
+        <p class="content">
+            <b><u><i>Định nghĩa:</i></u></b> Xác suất xuất hiện biến cố <strong>A</strong> là <i>tỉ số giữa số kết cục thuận
+                lợi cho <strong>A</strong> và tổng số kết cục duy nhất đồng khả năng khi thực hiện phép thử.
+            </i>
+            <br>
+            Nếu ký hiệu <strong>P(A)</strong> là xác suất xuất hiện biến cố <strong>A</strong>, m số kết cục thuận lợi cho biến
+            cố A, n số kết cục duy nhất đồng khả năng khi thực hiện phép thử, ta có công thức sau: <br> <br>
+            <div class="formula">
+                <img src="./img/Công Thức Tính Xác Suất.png" alt="Công thức tính xác suất" class="img-formula">
+            </div>
+        </p>
+
+        <h3 class="subtitle">CÁC LOẠI BIẾN CỐ</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trong thực tế có thể xảy ra 3 loại biến cố sau đây:
+        <ul>
+            <li>
+                Biến cố chắc chắn: đây là biến cố chắc chắn sẽ xảy ra. Thường được ký hiệu là U. <br>
+                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt nhỏ hơn hoặc bằng 6 là biến cố chắc chắn.
+            </li>
+            <li>
+                Biến cố không thể có: đây là loại biến cố không bao giờ xảy ra. <br>
+                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt 7 là biến cố không thể có.
+            </li>
+            <li>
+                Biến cố ngẫu nhiên: đây là loại biến cố có thể xảy ra hoặc không xảy ra khi thực hiện 1 phép thử. Các
+                biến cố thường được
+                ký hiệu là A, B, C,... <br>
+                Ví dụ: Khi tung 1 con xúc xắc thì biến cố xuất hiện mặt 1 chấm là biến cố ngẫu nhiên.
+            </li>
+        </ul>
+        Trong thực tế hầu hết các trường hợp mà ta gặp đều là biến cố ngẫu nhiên.
+        </p>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+        <ul>
+            <li>Phép thử là việc ta thực hiện điều kiện cơ bản để sự kiện, hiện tượng xảy ra.</li>
+            <li>Biến cố là kết quả có thể xảy ra hoặc không xảy ra của 1 phép thử.</li>
+            <li>Trong thực tế có 3 loại biến cố: biến cố chắc chắn, biến cố không thể có, biến cố ngẫu nhiên.
+                Trong đó biến cố ngẫu nhiên thường xuất hiện trong thực tế.
+            </li>
+        </ul>
+        </p>
+    </main>
+
+    <footer>
+        <div class="blank"></div>
+    </footer>
+</body>
+
+</html>
