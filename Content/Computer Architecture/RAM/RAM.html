@@ -253,15 +253,127 @@
             cũ.
             Khi RAM truyền dữ liệu tới CPU cần được xử lý, nó sẽ theo xung và mang theo dữ liệu. Đối với công nghệ cũ
             với mỗi đỉnh của xung sẽ truyền dữ liệu đi nhưng với công nghệ mới này thì với mỗi đỉnh của xung và hay đáy
-            của xung đều mang theo dữ liệu.
+            của xung đều mang theo dữ liệu. Do đó khi cùng 1 xung nhịp thì số lượng dữ liệu được truyền tải sẽ nhiều
+            gấp đôi.
         <div class="pictures">
             <div class="picture">
                 <img src="./img/DDR.svg" alt="" class="img-discribe"><br>
-                <i class="discribe">Double Data Rate</i>
+                <i class="discribe">Single Data Rate and Double Data Rate</i>
             </div>
         </div>
         </p>
+
+        <h3 class="subtitle">BUS RAM là gì?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <strong>Bus</strong> là từ viết tắt của <strong>"Omnibus"</strong> trong tiếng Latin dùng để chỉ hệ
+            thống giao tiếp và truyền dẫn dữ liệu giữa các thành phần trong máy tính. Ta có thể hình dung Bus
+            giống như 1 con đường truyền dữ liệu đi từ thiết bị này đến thiết bị khác. Bus có thể là 1 cụm đường
+            dẫn gồm nhiều con đường song song để truyền dữ liệu. Bus có thể là những đường dây front panel hay
+            là những đường vi mạch trên Mainboard. 1 đường đi đơn lẻ có thể truyền được 1 bit trong 1 xung nhịp
+            thì nếu có 8 đường thì sẽ truyền được 8 bits dữ liệu trong 1 xung nhịp và đó cũng chính là độ rộng
+            của bus (Bus Width). Các thế hệ RAM DDR hiện nay đều có Bus Width 64 bits.
+        </p>
         <br>
+
+        <p class="content">
+            Tóm lại có thể hiểu <strong>Bus là con đường truyền dẫn dữ liệu gồm nhiều làn song song nhau</strong>.
+            Có nhiều người vẫn còn bối rối và nhầm lẫn Bus RAM là tốc độ xử lý dữ liệu của RAM. Đấy là điều hoàn
+            toàn không đúng!
+        </p>
+
+        <h3 class="subtitle">DUAL CHANNEL LÀ GÌ?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Các bạn có thể hình dung là con đường trao đổi dữ liệu giữa RAM và CPU có 64 làn và mỗi làn đó đều là
+            làn 1 chiều trong 1 lkhoảng thời gian - tức trong 1 khoảng thời gian nào đó thì chỉ có thể đi từ CPU
+            tới RAM hoặc đi từ RAM tới CPU chứ không thể đi theo 2 chiều trong cùng 1 khoảng thời gian đó được.
+            Thời gian được canh chỉnh như thế nào là công việc của CPU nên ta cũng không cần quan tâm.
+        </p>
+        <br>
+
+        <p class="content">
+            Cũng chính do việc trong 1 khoảng thời gian mà chỉ có đi theo 1 chiều nên số lượng dữ liệu được trao
+            đổi không được liên tục nên sẻ ảnh hưởng đến tốc độ. Do đó Dual Channel ra đời để khắc phục vấn đề
+            này. Có thể hiểu là trong quá trình chuyển dữ liệu từ RAM tới CPU để xử lý vì CPU có tốc độ nhanh hơn
+            RAM rất nhiều nên khi CPU thực hiện xong nó phải lưu lại vào bộ đệm để lát nữa chuyển ra ngược lại RAM.
+            Điều này gây lãng phí thời gian cũng như tăng kích thước của bộ đệm.
+        </p>
+        <br>
+
+        <p class="content">
+            Khi đó nếu có Dual Channel ta có thể lắp thêm 1 thanh RAM nữa vào khe có hỗ trợ Dual Channel với
+            thanh RAM kia thì lúc đó khi CPU xử lý xong sẽ truyền dữ liệu ngược về thanh RAM thứ 2 chứ không
+            cần phải lưu lại vào bộ đệm trong CPU. Điều này giúp cho CPU có thể xử lý liên tục và không cần phải
+            lưu lại quá nhiều dữ liệu trong bộ đệm.
+        </p>
+        <br>
+
+        <p class="content">
+            Đấy cũng là lý do khi bạn cần nâng cấp RAM thì bạn thường hay được khuyên là nên chọn 2 thanh RAM 4GB
+            hơn là 1 thanh RAM 8GB vì 2 thanh 4GB có thể lắp thành cặp để tận dụng được khả năng truyền tải tốt hơn
+            của Dual Channel. Đương nhiên là bạn mua 1 thanh 8GB cũng được nhưng sẽ không tối ưu bằng thôi.
+        </p>
+
+        <h3 class="subtitle">CÁCH TÍNH SỐ LƯỢNG DỮ LIỆU ĐƯỢC RAM XỬ LÝ TRONG 1 GIÂY</h3>
+        <div class="underline"></div>
+        <p class="content">
+        <div class="pictures">
+            <div class="picture">
+                <img src="./img/information-RAM.png" alt="" class="img-discribe"><br>
+                <i class="discribe">Thông số Mega Transfers của RAM</i>
+            </div>
+        </div>
+        Có nhiều người vẫn còn nhầm tưởng rằng số 3200 trong tấm hình trên là số xung nhịp của thanh RAM có thể
+        hoạt động. Điều này hoàn toàn sai lầm!
+        </p>
+        <br>
+
+        <p class="content">
+            Số 3200 đấy là 3200 MT/s (<strong>Mega Transfers/s</strong>). Có nghĩa là số dữ liệu có thể xử lý hay
+            truyền đi trong 1 giây trên <strong>1 đường truyền</strong>. Ta tính tốc độ truyền dữ liệu theo công
+            thức:
+            <br><br>
+        <div class="formula">
+            <strong>Band Width = (Số dữ liệu truyền tải trong 1 giây * Bus Width) / 8</strong>
+        </div>
+        <br>
+        Trong đó:
+        <ul>
+            <li><strong>Band Width</strong>: băng thông hay tốc độ. Đơn vị <strong>bytes/s</strong>.</li>
+            <li>
+                <strong>Số dữ liệu truyền tải hay xử lý trong 1 giây</strong>: số ghi trên thanh RAM. Đơn vị
+                <strong>T/s (Transfers/s)</strong>.
+            </li>
+            <li>
+                <strong>Bus Width</strong>: Độ rộng của Bus RAM. Hầu hết các loại RAM hiện nay đều là 64 bits
+                nên giá trị này thường cố định là 64.
+            </li>
+        </ul>
+        </p>
+        <br>
+
+        <p class="content">
+            Ta cần phải chia cho 8 tại vì đơn vị dữ liệu nhỏ nhất trên RAM là byte chứ không phải bit. Mà 1
+            byte = 8 bits nên ta chia cho 8 để thành số byte.
+        </p>
+        <br>
+
+        <p class="content">
+            Trong trường hợp sử dụng thanh RAM trên thì tốc độ truyền tải dữ liệu là: (3.200.000.000 * 64) / 8 =
+            204.800.000.000 bytes/s xấp xỉ 23.84 GB/s. Tốc độ quá kinh khủng! Ta có thể tốc độ của thanh RAM
+            này nhanh gấp gần 5 lần 1 ổ SSD cao cấp nhất hiện nay có trên thị trường. Thật sự còn rất lâu tốc
+            độ của SSD mới có thể đuổi kịp tốc độ của RAM.
+        </p>
+        <br>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trên đây là những kiến thức cơ bản khi nói về RAM mà ai cũng nên biết. Kiến thức mình còn hạn
+            hẹp và có thể có nhiều sai lầm trong bài viết. Rất mong được mọi người đóng góp thêm ý kiến để
+            hoàn thiện cũng như trao đổi thêm kiến thức. 
+        </p>
     </main>
 
     <footer>
