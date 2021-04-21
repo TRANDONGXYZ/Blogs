@@ -25,6 +25,8 @@ h1 {
 
 ul {
     margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
 }
 
 .underline {
@@ -45,6 +47,28 @@ ul {
 
 .formula {
     text-align: center;
+}
+
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.picture {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.img-discribe {
+    max-width: 100%;
+    border-radius: 2rem;
+    border: 5px black solid;
+}
+
+.discribe {
+    font-size: 17px;
 }
 
 .img-formula {
