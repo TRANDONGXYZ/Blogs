@@ -43,9 +43,10 @@
         <h3 class="subtitle">GIỚI THIỆU</h3>
         <div class="underline"></div>
         <p class="content">
-            <strong>Random Access Memory</strong> thường được gọi tắt là <strong>RAM</strong> (đọc là "ram") là thành
-            phần quan trọng trong máy tính của chúng ta. Không có RAM máy tính chúng ta vẫn có thể hoạt động được nhưng
-            không thể hoạt động tốt và mượt mà như ngày nay. Vậy RAM là gì? Hoạt động như thế nào?
+            Chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về RAM nha. <strong>Random Access Memory</strong> thường
+            được gọi tắt là <strong>RAM</strong> (đọc là "ram") là thành phần quan trọng trong máy tính của chúng ta.
+            Không có RAM máy tính chúng ta vẫn có thể hoạt động được nhưng không thể hoạt động tốt và mượt mà như ngày
+            nay. Vậy RAM là gì? Hoạt động như thế nào?
         </p>
 
         <h3 class="subtitle">ĐỊNH NGHĨA</h3>
@@ -61,8 +62,7 @@
 
         <p class="content">
             Quá rườm rà và rắc rối! Bản thân mình mới học mà đọc những định nghĩa này cũng chịu luôn. Lấy ví dụ đi cho
-            dễ
-            hiểu ha.
+            dễ hiểu ha.
         </p>
         <br>
 
@@ -365,14 +365,91 @@
             này nhanh gấp gần 5 lần 1 ổ SSD cao cấp nhất hiện nay có trên thị trường. Thật sự còn rất lâu tốc
             độ của SSD mới có thể đuổi kịp tốc độ của RAM.
         </p>
+
+        <h3 class="subtitle">CƠ CHẾ KIỂM SOÁT LỖI CỦA RAM</h3>
+        <div class="underline"></div>
+        <p class="content">
+            RAM có tốc độ nhanh như thế liệu có khi nào xảy ra lỗi không? Khi xảy ra lỗi thì dẫn đến chuyện gì
+            sẽ xảy ra? Khi xảy ra lỗi thì liệu có thể phát hiện hay thậm chí là sửa được lỗi hay không? Đương
+            nhiên trong quá trình xử lý dữ liệu thì không thể nào tránh khỏi được việc phát sinh lỗi nên chắc
+            chắn là lưu trữ trong bộ nhớ RAM có thể phát sinh lỗi. Vì lỗi chắc chắn là có nên ta không thể
+            thay đổi được, lúc này cái ta thật sự cần quan tâm là xác suất xảy ra lỗi là bao nhiêu thì hơn.
+        </p>
         <br>
+
+        <p class="content">
+            Hầu hết các loại bộ nhớ RAM hiện nay đều rất đáng tin cậy. Hệ thống chỉ cần nhờ 1 bộ điều khiển
+            bộ nhớ kiểm tra lỗi lúc khởi động và gần như là có thể tin vào nó. Các chip nhớ có cơ chế kiểm
+            tra lỗi được xây dựng theo phương pháp <strong>chẵn - lẽ (parity)</strong> để kiểm tra. Cơ chế
+            hoạt động của phương pháp này rất đơn giản. Cứ mỗi 8 bits sẽ có 1 bit phụ để lưu thông tin để
+            kiểm tra.
+            <p class="content">
+                <ul>
+                    <li>
+                        <strong>Cơ chế bậc chẵn (Even Parity)</strong>: khi 8 bits trong 1 byte dữ liệu được
+                        nhận, chip nhớ sẽ tiến hành thêm 1 bit phụ vào. Bit này là tổng số bit 1 có trong 1
+                        byte dữ liệu vừa nhận được. Bit này có giá trị là 1 khi số bit 1 có trong 1 byte dữ
+                        liệu đó là lẻ, có giá trị là 0 khi số bit 1 có trong byte dữ liệu đó là chẵn. Khi dữ
+                        liệu được đọc ra việc tính toán các bit 1 được lặp lại một lần nữa so sánh với bit
+                        phụ. Nếu phù hợp với bit phụ thì kết quả của việc đọc được xem là đúng. Còn nếu
+                        không phù hợp thì chip nhớ sẽ thông báo có lỗi.
+                    </li>
+
+                    <li>
+                        <strong>Cơ chế bậc lẻ (Odd Parity)</strong>: cơ chế bậc lẻ cũng hoạt động tương tự
+                        như cơ chế bậc chẵn nhưng khác ở chỗ là khi số bit 1 là chẵn thì bit phụ có giá trị
+                        là 1, khi số bit 1 là lẻ thì bit phụ có giá trị là 0.
+                    </li>
+                </ul>
+            </p>
+        </p>
+        <br>
+
+        <p class="content">
+            Tại sao chúng ta chỉ quan tâm tới việc đếm số bit 1 thôi mà lại không đếm số bit 0? Đơn giản đó
+            là vì tính chất vật lý của chúng. Bit 1 là khi có điện còn bit 0 là khi không có điện. Khi bit
+            đó mang giá trị là 0 thì ta không chắc chắn chuyện gì đang xảy ra. Có thể xảy ra lỗi khiến cho
+            ô nhớ đó không thể mang điện hoặc có thể cúp điện,... Tóm lại việc ô nhớ đó mang bit 0 do vấn
+            đề gì ta không thể kiếm soát được trong khi ô nhớ mang bit 1 tại lại hoàn toàn có thể kiểm soát
+            được chỉ đơn giản là do ô nhớ đó có điện, ô nhớ đó hoạt động bình thường. Nên đếm theo bit 1 là
+            chắc chắn nhất. Mình chỉ nói là "nhất" thôi nha chứ không dám khẳng định 100% vì chắn chắn 100%
+            có khả năng xảy ra lỗi.
+        </p>
+        <br>
+
+        <p class="content">
+            Nhưng lại có 1 điểm yếu của cơ chế kiểm soát lỗi bên trên đó là chúng chỉ có khả năng nhận biết
+            có lỗi hay không mà thôi chứ không có cơ chế sửa lỗi. Nếu trong 1 byte dữ liệu bị sai thì chúng
+            sẽ bị bỏ qua chứ không thể sửa được. Nhưng đối với các hệ thống lớn và quan trọng thì chuyện
+            xảy ra lỗi là điều thật sự rất cần quan tâm và cần có nhiều công nghệ hiện đại hơn để tránh
+            lỗi xảy ra nhiều nhất có thể. Từ đó công nghệ <strong>Error Correction Code (ECC)</strong> ra
+            đời. Công nghệ này thường được trang bị trên các thanh RAM được sử dụng cho mục đích đặc biệt
+            nào đó và dĩ nhiên chúng rất đắt tiền. ECC có thể phát hiện lỗi và sửa lỗi nếu có thể. Mình chỉ
+            nói là nếu có thể thôi vì có nhiều trường hợp công nghệ này vẫn chưa thể giải quyết được.Cơ chế
+            hoạt động của ECC cũng tương tự như cơ chế chẵn - lẽ như trên chỉ có điều thay vì dùng 1 bit phụ
+            để kiểm tra thì ta dùng nhiều bit phụ để kiểm tra thì lúc này ta sẽ có nhiều thông tin hơn để
+            kiểm tra và sửa lỗi (nhiều bao nhiêu thì còn tùy thuộc và Bus cho phép). Công nghệ ECC sử dụng
+            các thuật toán đặc biết để giúp phát hiện lỗi và sửa lỗi, thậm chí công nghệ này còn cho phép ta
+            có thể xác định được trường hợp có nhiều hơn 1 bit trong 1 byte dữ liệu bị hỏng. Tuy nhiên từ
+            thực tế cho thấy trường hợp nhiều hơn 1 bit trong 1 byte dữ liệu bị hỏng rất ít xảy ra và nếu
+            có xảy ra thì công nghệ này vẫn chưa thể xử lý được. Cũng chính vì phải lưu trữ nhiều hơn và
+            phải xử lý nhiều hơn nên tốc độ của RAM được trang bị ECC sẽ chậm hơn so với RAM bình thường
+            nhưng cũng không phải quá đáng kể.
+        </p>
+        <br>
+
+        <p class="content">
+            Các loại RAM có trên thị trường hiện nay sử dụng chip nhớ <strong>không chẵn - lẻ (Nonparity)</strong>.
+            Tức là các loại RAM này không được trang bị cơ chế kiểm soát lỗi mà hoàn toàn phụ thuộc vào bộ
+            khả năng phát hiện lỗi của bộ điều khiển bộ nhớ.
+        </p>
 
         <h3 class="subtitle">KẾT LUẬN</h3>
         <div class="underline"></div>
         <p class="content">
             Trên đây là những kiến thức cơ bản khi nói về RAM mà ai cũng nên biết. Kiến thức mình còn hạn
-            hẹp và có thể có nhiều sai lầm trong bài viết. Rất mong được mọi người đóng góp thêm ý kiến để
-            hoàn thiện cũng như trao đổi thêm kiến thức. 
+            hẹp và có thể có nhiều sai sót trong bài viết. Rất mong được mọi người đóng góp thêm ý kiến để
+            hoàn thiện cũng như trao đổi thêm kiến thức. Cảm ơn mọi người.
         </p>
     </main>
 
