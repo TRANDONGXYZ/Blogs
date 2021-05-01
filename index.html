@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/content.css">
     <link rel="stylesheet" href="./css/categories.css">
@@ -29,17 +30,133 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="./Content/Math/Math.html" class="nav-link">Mathematics</a></li>
-                <li><a href="#" class="nav-link">Algorithm</a></li>
+                <li><a href="./categories/Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
+                <li><a href="./categories/Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
                 <li><a href="#" class="nav-link">Computer Science</a></li>
-                <li><a href="#" class="nav-link">Story</a></li>
+                <li><a href="#" class="nav-link">Stories</a></li>
                 <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="container-categories">
+
+        <!-- Start Posters -->
+
+        <!-- <img src="./img/memory.gif" alt="poster" class="poster"> -->
+
+        <!-- End Posters -->
+
+
+
+        <!-- Start Posts and Explore -->
+
+        <div class="posts-explores">
+            <div class="posts">
+                <p class="recent">Recent posts</p>
+                <div class="post">
+                    <div class="border-img-post"><img src="./img/internet.png" alt="" class="img-post"></div>
+                    <div class="info-post">
+                        <div class="topic-title">
+                            <div class="topic">
+                                <img src="./img/avatar.svg" alt="" class="avatar">
+                                <p class="author-topic">
+                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Network</a>
+                                </p>
+                            </div>
+                            <a href="./categories/Computer Network/Internet/Internet.html" class="title">Internet là gì?</a>
+                        </div>
+                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="border-img-post"><img src="./img/ram.svg" alt="" class="img-post"></div>
+                    <div class="info-post">
+                        <div class="topic-title">
+                            <div class="topic">
+                                <img src="./img/avatar.svg" alt="" class="avatar">
+                                <p class="author-topic">
+                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Architecture</a>
+                                </p>
+                            </div>
+                            <a href="./categories/Computer Architecture/RAM/RAM.html" class="title">Random Access Memory (RAM) là gì?</a>
+                        </div>
+                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="border-img-post"><img src="./img/psu.svg" alt="" class="img-post"></div>
+                    <div class="info-post">
+                        <div class="topic-title">
+                            <div class="topic">
+                                <img src="./img/avatar.svg" alt="" class="avatar">
+                                <p class="author-topic">
+                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Architecture</a>
+                                </p>
+                            </div>
+                            <a href="./categories/Computer Architecture/Power Supply Unit/Power Supply Unit.html" class="title">Power Supply Unit (PSU) là gì?</a>
+                        </div>
+                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explores">
+                <div class="item-explore">
+                    <div class="content-explore">
+                        <p class="title-explore">Introduction</p>
+                        <div class="underline-explore"></div>
+                        <div class="myself">
+                            <img src="./img/avatar.svg" alt="avatar" id="avatar-introduction">
+                            <div class="my-name">Tran Dong</div>
+                            <div class="position">
+                                <img src="./img/position.svg" class="marker">
+                                <p class="name-position">Ho Chi Minh City</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-explore">
+                    <div class="content-explore">
+                        <p class="title-explore">Categories</p>
+                        <div class="underline-explore"></div>
+                        <div class="categories">
+                            <a href="./categories/Algorithms/Algorithms.html" class="link-category">Algorithms</a>
+                            <a href="./categories/Mathematics/Mathematics.html" class="link-category">Mathematics</a>
+                            <a href="./categories/Computer Network/Computer Network.html" class="link-category">Computer Network</a>
+                            <a href="" class="link-category">Computer Security</a>
+                            <a href="./categories/Computer Architecture/Computer Architecture.html" class="link-category">Computer Architecture</a>
+                            <a href="./categories/Programming Language/Programming Language.html" class="link-category">Programming Language</a>
+                            <a href="" class="link-category">Technology</a>
+                            <a href="" class="link-category">Games</a>
+                            <a href="" class="link-category">Stories</a>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- End Explores -->
+        </div>
+
+        <!-- End Posts and Explore -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="container-categories">
             <a href="./Content/Algorithms/Algorithms.html" class="item">
                 <img src="./img/algorithm.png" class="icon-categories">
                 <div class="info">
@@ -81,7 +198,14 @@
                     <p class="title-categories">Computer Security</p>
                 </div>
             </a>
-        </div>
+
+            <a href="./update.html" class="item">
+                <img src="./img/technology.jpg" class="icon-categories">
+                <div class="info">
+                    <p class="title-categories">Technology</p>
+                </div>
+            </a>
+        </div> -->
     </main>
 
     <footer>

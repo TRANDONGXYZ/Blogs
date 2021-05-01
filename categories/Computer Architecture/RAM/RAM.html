@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="../../../css/content.css">
+    <link rel="stylesheet" href="../../../css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>RANDOM ACCESS MEMORY</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../../index.html">
+                <div class="logo">
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="../../../img/logo.png" alt="Logo" class="img-logo">
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
+                <li><a href="../../Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
+                <li><a href="#" class="nav-link">Computer Science</a></li>
+                <li><a href="#" class="nav-link">Stories</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main  class="main-post">
+        <p class="written"><i>Ngày viết: 21/04/2021 - 11:20 PM</i></p> <br>
+        <h1 class="title">RANDOM ACCESS MEMORY</h1>
+        <h3 class="subtitle">GIỚI THIỆU</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về RAM nha. <strong>Random Access Memory</strong> thường
+            được gọi tắt là <strong>RAM</strong> (đọc là "ram") là thành phần quan trọng trong máy tính của chúng ta.
+            Không có RAM máy tính chúng ta vẫn có thể hoạt động được nhưng không thể hoạt động tốt và mượt mà như ngày
+            nay. Vậy RAM là gì? Hoạt động như thế nào?
+        </p>
+
+        <h3 class="subtitle">ĐỊNH NGHĨA</h3>
+        <div class="underline"></div>
+        <p class="content">
+            RAM là <strong>bộ nhớ truy cập ngẫu nhiên</strong> hay còn được gọi là <strong>bộ nhớ trong</strong> hay
+            <strong>bộ nhớ chính</strong> để lưu trữ các thông tin thay đổi đang sử dụng. RAM là loại bộ nhớ khả biến
+            cho
+            phép truy cập tới vị trí bất kỳ nào trong bộ nhớ dựa theo địa chỉ của ô nhớ trong RAM. Mỗi ô nhớ trong
+            RAM được hệ điều hành đánh địa chỉ để CPU có thể dựa vào địa chỉ đó để truy xuất dữ liệu.
+        </p>
+        <br>
+
+        <p class="content">
+            Quá rườm rà và rắc rối! Bản thân mình mới học mà đọc những định nghĩa này cũng chịu luôn. Lấy ví dụ đi cho
+            dễ hiểu ha.
+        </p>
+        <br>
+
+        <p class="content">
+            Khi chúng ta dùng trình duyệt để duyệt web thì dữ liệu mà chúng ta đang sử dụng (cụ thể ở đây là ứng
+            dụng trình duyệt) sẽ được lưu giữ trong RAM. Chúng ta bật qua các tab khác hay mở thêm tab mới sau đó quay
+            lại
+            các tab trước đó và sử dụng tiếp vẫn được là do dữ liệu đã được lưu trên RAM nên chúng không bị mất đi khi
+            ta
+            sử dụng các tab khác. Mở rộng ra cho nhiều chương trình, khi ta đang dùng chương trình nào đó sau đó chuyển
+            sang
+            dùng các chương trình khác rồi lại quay về chương trình trước đó sử dụng tiếp vẫn được là do dữ liệu của
+            chương
+            trình trước đó đã được lưu lại trên RAM nên nếu bạn có dùng chương trình khác thì chương trình cũ sẽ không
+            bị
+            mất. Đó là lí do vì sao trong định nghĩa nói rằng RAM là bộ nhớ dùng để lưu những thông tin thay đổi đang sử
+            dụng.
+        </p>
+        <br>
+
+        <p class="content">
+            Khi chúng ta sử dụng máy tính thì không chỉ có các chương trình chúng ta mở đang chạy mà còn có rất nhiều
+            chương
+            trình khác của hệ thống đang chạy ngầm. Do đó nếu lưu dữ liệu của nhiều chương trình như vậy lên RAM thì làm
+            thế
+            nào để biết được đó là dữ liệu của chương trình nào để truy xuất cho đúng? Để giải quyết bài toán đó người
+            ta sẽ
+            đánh địa chỉ cho các ô nhớ trong RAM. Do đó để phân biệt được dữ liệu đó là của ứng dụng nào thì chúng ta
+            chỉ cần
+            dựa vào địa chỉ của ô nhớ.
+        </p>
+        <br>
+
+        <p class="content">
+            RAM được gọi là bộ nhớ truy cập ngẫu nhiên là vì nó có thể đi đến ô nhớ bất kỳ trong RAM với thời gian gần
+            như tức thì chứ không cần phải đi tuần tự từ ô nhớ đầu tiên tới ô nhớ ta đang cần.
+        </p>
+        <br>
+
+        <p class="content">
+            Dễ hiểu hơn nhiều rồi chứ đúng không?
+        </p>
+
+        <h3 class="subtitle">ĐẶC ĐIỂM CỦA RAM</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Đối với các loại RAM thông dụng hiện nay thì chúng thường có các đặc điểm sau:
+        <ul>
+            <li>Cần phải có điện mới có thể hoạt động, mất điện sẽ mất hết dữ liệu.</li>
+            <li>Có tốc độ đọc ghi rất cao.</li>
+        </ul>
+        </p>
+
+        <h3 class="subtitle">RAM TRÔNG RA LÀM SAO?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            RAM có nhiều hình kích thước và ngoại hình khác nhau nhưng nhìn chung có thể dễ dàng nhận ra nó là RAM.
+        </p>
+        <br>
+
+        <p class="content">
+        <ul>
+            <li>
+                RAM trong <strong>Laptop</strong>: vì tính chất nhỏ gọn, nhẹ của Laptop nên các thanh RAM này
+                thường sẽ có kích thước nhỏ gọn và đơn giản.
+                <div class="pictures">
+                    <div class="picture">
+                        <img src="./img/RAM laptop.jpg" alt="" class="img-discribe"><br>
+                        <i class="discribe">RAM Laptop</i>
+                    </div>
+                </div>
+            </li>
+            <li>
+                RAM trong <strong>Desktop</strong>: vì desktop có nhiều không gian hơn so với laptop nên thanh
+                RAM trong desktop sẽ lớn hơn so với laptop. Cũng vì có nhiều không gian và nhu cầu của người
+                dùng đa dạng hơn nên có nhiều mẫu mã không chỉ phục vụ cho công việc mà còn thể hiện được phong
+                cách của người dùng.
+                <div class="pictures">
+                    <div class="picture">
+                        <img src="./img/RAM desktop.jpg" alt="" class="img-discribe"><br>
+                        <i class="discribe">RAM Desktop</i>
+                    </div>
+                    <div class="picture">
+                        <img src="./img/RAM desktop non RGB.jpg" alt="" class="img-discribe"><br>
+                        <i class="discribe">RAM Desktop</i>
+                    </div>
+                    <div class="picture">
+                        <img src="./img/RAM desktop RGB.jpg" alt="" class="img-discribe"><br>
+                        <i class="discribe">RAM Desktop có RGB</i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </p>
+
+        <h3 class="subtitle">PHÂN LOẠI RAM</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Có rất nhiều loại RAM khác nhau tùy theo mục đích sử dụng nhưng nhìn chung ta thường sẽ thấy các loại RAM
+            phổ biến
+            sau đây:
+        <ul>
+            <li>
+                <strong>RAM động (Dynamic RAM - DRAM)</strong>: RAM động được tạo thành từ nhiều mạch tích hợp
+                (Integrated
+                Circuit - IC) bao gồm hàng triệu bóng bán dẫn (transitor)
+                và tụ điện. Đối với thanh RAM phổ biến hiện nay thì 1 bóng bán dẫn và 1 tụ điện sẽ đi đôi với nhau tạo
+                thành 1
+                tế bào nhớ. Tụ điện sẽ lưu giữ giá trị 0 hoặc 1 tương ứng với 2 trạng thái không có điện và có điện.
+                Bóng bán
+                dẫn hoạt động như 1 ngắt dòng điện để mạch điều khiển trên chip nhớ đọc hay thay đổi trạng thái của tụ
+                điện. Do RAM động cần được làm tươi liên tục nên tốc của bộ nhớ cũng sẽ bị ảnh hưởng.
+            </li>
+            <li>
+                <strong>RAM tĩnh (Static RAM - SRAM)</strong>: đã có RAM động thì chắc hẳn cũng phải có RAM tĩnh đúng
+                không.
+                RAM tĩnh sử dụng công nghệ hoàn toàn khác so với RAM động. RAM tĩnh sẽ lưu giữ giá trị bit 0 hoặc 1 dưới
+                dạng
+                các con bật. Một con bật của 1 tế bào nhớ sẽ tốn khoảng 4 đến 6 bóng bán dẫn và 1 vài dây dẫn khác.
+                Nhưng đặc
+                biệt là chúng không cần được làm tươi do chúng không bị rò rỉ điện năng. Cũng vì không bị rò rỉ điện
+                năng
+                nên cũng không cần được làm tươi nên tốc độ của RAM tĩnh sẽ nhanh hơn RAM động. Nhưng cũng vì nó cần có
+                nhiều
+                bóng bán dẫn hơn và nhiều dây dẫn hơn cho 1 tế bào so với RAM động nên thường kích thước của RAM tĩnh sẽ
+                lớn
+                hơn. Do đó trên cùng 1 kích thước thì dung lượng của RAM tĩnh sẽ ít hơn RAM động điều này dẫn đến chi
+                phí
+                của RAM tĩnh sẽ cao hơn RAM động.
+            </li>
+        </ul>
+        Như vậy RAM tĩnh nhanh và đắt tiền, RAM động rẻ hơn nhưng chậm hơn. RAM tĩnh thường được chế tạo làm các bộ đệm
+        nhạy tốc độ của CPU. Trong khi RAM động thường được dùng làm bộ nhớ chính của hệ thống.
+        </p>
+        <br>
+
+        <p class="content">
+            Đương nhiên là còn nhiều loại RAM khác nhưng chúng cũng đã cũ hoặc được sử dụng cho mục đích đặc biệt nên
+            mình sẽ không nhắc tới ở đây.
+        </p>
+        <br>
+
+        <p class="content">
+            <i>***Lưu ý: vì RAM tĩnh và RAM động đều là RAM nên tất cả đều phải cần điện mới hoạt động được.</i>
+        </p>
+
+        <h3 class="subtitle">CÁCH HOẠT ĐỘNG CỦA RAM ĐỘNG</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Với mỗi loại RAM sẽ có cách hoạt động khác nhau. Mình sẽ chỉ trình bày cách hoạt động của RAM động được sử
+            dụng
+            phổ biến hiện nay mà thôi.
+        </p>
+        <br>
+
+        <p class="content">
+            Ta có thể hình dung 1 tụ điện giống như 1 thùng nước có thể chứa các điện tử. Để lưu giá trị 1 vào trong tụ
+            điện
+            thì ta cần phải nạp đầy điện tử vào trong tụ điện. Để lưu 0 ta chỉ cần làm cho tụ điện rỗng (xả hết điện).
+            Tuy
+            nhiên tụ điện có 1 khuyết điểm đó là vấn đề rò rỉ điện (hay còn lại là lỗ thủng). Chỉ trong khoảng vài mili
+            giây,
+            1 thùng đầy điện tích sẽ trở nên rỗng. Do đó để có thể hoạt động được tốt thì ta cần phải có cơ chế làm tươi
+            lại
+            tụ điện để tránh bị mất điện (dẫn đến mất dữ liệu). Để làm việc này bộ điều khiển bộ nhớ phải đọc lại giá
+            trị hiện
+            tại rồi nạp đầy nó lại. Quá trình làm tươi này diễn ra tự động hàng ngàn lần mỗi giây. RAM động phải được
+            làm
+            tươi 1 cách liên tục nếu không nó sẽ "quên" mọi thứ nó đang lưu giữ. Đây cũng là lý do loại RAM nay được đặt
+            tên là RAM động. Mặt hạn chế của việc làm tươi này là sẽ mất 1 khoảng thời gian cho việc làm tươi liên tục
+            nên
+            sẽ ảnh hưởng tới tốc độ của bộ nhớ.
+        </p>
+
+        <h3 class="subtitle">RAM PHỔ BIẾN NHẤT HIỆN NAY LÀ LOẠI RAM NÀO?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            RAM phổ biến nhất hiện nay là loại <strong>DDR4 SDRAM</strong> (<strong>Double Data Rate Synchronous Dynamic
+                RAM</strong>, số 4 là thế hệ thứ 4) thường được gọi tắt là RAM DDR4. Loại RAM này thay vì có tần số làm
+            tươi
+            riêng nó sẽ đồng bộ xung nhịp với xung nhịp của cả hệ thống. Điều này giúp việc trao đổi dữ liệu giữa các
+            linh kiện sẽ nhanh và chính xác hơn.
+        </p>
+        <br>
+
+        <p class="content">
+            RAM này còn được trang bị thêm công nghệ giúp cho việc trao đổi dữ liệu nhanh gấp đôi so với các loại RAM
+            cũ.
+            Khi RAM truyền dữ liệu tới CPU cần được xử lý, nó sẽ theo xung và mang theo dữ liệu. Đối với công nghệ cũ
+            với mỗi đỉnh của xung sẽ truyền dữ liệu đi nhưng với công nghệ mới này thì với mỗi đỉnh của xung và hay đáy
+            của xung đều mang theo dữ liệu. Do đó khi cùng 1 xung nhịp thì số lượng dữ liệu được truyền tải sẽ nhiều
+            gấp đôi.
+        <div class="pictures">
+            <div class="picture">
+                <img src="./img/DDR.svg" alt="" class="img-discribe"><br>
+                <i class="discribe">Single Data Rate and Double Data Rate</i>
+            </div>
+        </div>
+        </p>
+
+        <h3 class="subtitle">BUS RAM là gì?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <strong>Bus</strong> là từ viết tắt của <strong>"Omnibus"</strong> trong tiếng Latin dùng để chỉ hệ
+            thống giao tiếp và truyền dẫn dữ liệu giữa các thành phần trong máy tính. Ta có thể hình dung Bus
+            giống như 1 con đường truyền dữ liệu đi từ thiết bị này đến thiết bị khác. Bus có thể là 1 cụm đường
+            dẫn gồm nhiều con đường song song để truyền dữ liệu. Bus có thể là những đường dây front panel hay
+            là những đường vi mạch trên Mainboard. 1 đường đi đơn lẻ có thể truyền được 1 bit trong 1 xung nhịp
+            thì nếu có 8 đường thì sẽ truyền được 8 bits dữ liệu trong 1 xung nhịp và đó cũng chính là độ rộng
+            của bus (Bus Width). Các thế hệ RAM DDR hiện nay đều có Bus Width 64 bits.
+        </p>
+        <br>
+
+        <p class="content">
+            Tóm lại có thể hiểu <strong>Bus là con đường truyền dẫn dữ liệu gồm nhiều làn song song nhau</strong>.
+            Có nhiều người vẫn còn bối rối và nhầm lẫn Bus RAM là tốc độ xử lý dữ liệu của RAM. Đấy là điều hoàn
+            toàn không đúng!
+        </p>
+
+        <h3 class="subtitle">DUAL CHANNEL LÀ GÌ?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Các bạn có thể hình dung là con đường trao đổi dữ liệu giữa RAM và CPU có 64 làn và mỗi làn đó đều là
+            làn 1 chiều trong 1 lkhoảng thời gian - tức trong 1 khoảng thời gian nào đó thì chỉ có thể đi từ CPU
+            tới RAM hoặc đi từ RAM tới CPU chứ không thể đi theo 2 chiều trong cùng 1 khoảng thời gian đó được.
+            Thời gian được canh chỉnh như thế nào là công việc của CPU nên ta cũng không cần quan tâm.
+        </p>
+        <br>
+
+        <p class="content">
+            Cũng chính do việc trong 1 khoảng thời gian mà chỉ có đi theo 1 chiều nên số lượng dữ liệu được trao
+            đổi không được liên tục nên sẻ ảnh hưởng đến tốc độ. Do đó Dual Channel ra đời để khắc phục vấn đề
+            này. Có thể hiểu là trong quá trình chuyển dữ liệu từ RAM tới CPU để xử lý vì CPU có tốc độ nhanh hơn
+            RAM rất nhiều nên khi CPU thực hiện xong nó phải lưu lại vào bộ đệm để lát nữa chuyển ra ngược lại RAM.
+            Điều này gây lãng phí thời gian cũng như tăng kích thước của bộ đệm.
+        </p>
+        <br>
+
+        <p class="content">
+            Khi đó nếu có Dual Channel ta có thể lắp thêm 1 thanh RAM nữa vào khe có hỗ trợ Dual Channel với
+            thanh RAM kia thì lúc đó khi CPU xử lý xong sẽ truyền dữ liệu ngược về thanh RAM thứ 2 chứ không
+            cần phải lưu lại vào bộ đệm trong CPU. Điều này giúp cho CPU có thể xử lý liên tục và không cần phải
+            lưu lại quá nhiều dữ liệu trong bộ đệm.
+        </p>
+        <br>
+
+        <p class="content">
+            Đấy cũng là lý do khi bạn cần nâng cấp RAM thì bạn thường hay được khuyên là nên chọn 2 thanh RAM 4GB
+            hơn là 1 thanh RAM 8GB vì 2 thanh 4GB có thể lắp thành cặp để tận dụng được khả năng truyền tải tốt hơn
+            của Dual Channel. Đương nhiên là bạn mua 1 thanh 8GB cũng được nhưng sẽ không tối ưu bằng thôi.
+        </p>
+
+        <h3 class="subtitle">CÁCH TÍNH SỐ LƯỢNG DỮ LIỆU ĐƯỢC RAM XỬ LÝ TRONG 1 GIÂY</h3>
+        <div class="underline"></div>
+        <p class="content">
+        <div class="pictures">
+            <div class="picture">
+                <img src="./img/information-RAM.png" alt="" class="img-discribe"><br>
+                <i class="discribe">Thông số Mega Transfers của RAM</i>
+            </div>
+        </div>
+        Có nhiều người vẫn còn nhầm tưởng rằng số 3200 trong tấm hình trên là số xung nhịp của thanh RAM có thể
+        hoạt động. Điều này hoàn toàn sai lầm!
+        </p>
+        <br>
+
+        <p class="content">
+            Số 3200 đấy là 3200 MT/s (<strong>Mega Transfers/s</strong>). Có nghĩa là số dữ liệu có thể xử lý hay
+            truyền đi trong 1 giây trên <strong>1 đường truyền</strong>. Ta tính tốc độ truyền dữ liệu theo công
+            thức:
+            <br><br>
+        <div class="formula">
+            <strong>Band Width = (Số dữ liệu truyền tải trong 1 giây * Bus Width) / 8</strong>
+        </div>
+        <br>
+        Trong đó:
+        <ul>
+            <li><strong>Band Width</strong>: băng thông hay tốc độ. Đơn vị <strong>bytes/s</strong>.</li>
+            <li>
+                <strong>Số dữ liệu truyền tải hay xử lý trong 1 giây</strong>: số ghi trên thanh RAM. Đơn vị
+                <strong>T/s (Transfers/s)</strong>.
+            </li>
+            <li>
+                <strong>Bus Width</strong>: Độ rộng của Bus RAM. Hầu hết các loại RAM hiện nay đều là 64 bits
+                nên giá trị này thường cố định là 64.
+            </li>
+        </ul>
+        </p>
+        <br>
+
+        <p class="content">
+            Ta cần phải chia cho 8 tại vì đơn vị dữ liệu nhỏ nhất trên RAM là byte chứ không phải bit. Mà 1
+            byte = 8 bits nên ta chia cho 8 để thành số byte.
+        </p>
+        <br>
+
+        <p class="content">
+            Trong trường hợp sử dụng thanh RAM trên thì tốc độ truyền tải dữ liệu là: (3.200.000.000 * 64) / 8 =
+            204.800.000.000 bytes/s xấp xỉ 23.84 GB/s. Tốc độ quá kinh khủng! Ta có thể tốc độ của thanh RAM
+            này nhanh gấp gần 5 lần 1 ổ SSD cao cấp nhất hiện nay có trên thị trường. Thật sự còn rất lâu tốc
+            độ của SSD mới có thể đuổi kịp tốc độ của RAM.
+        </p>
+
+        <h3 class="subtitle">CƠ CHẾ KIỂM SOÁT LỖI CỦA RAM</h3>
+        <div class="underline"></div>
+        <p class="content">
+            RAM có tốc độ nhanh như thế liệu có khi nào xảy ra lỗi không? Khi xảy ra lỗi thì dẫn đến chuyện gì
+            sẽ xảy ra? Khi xảy ra lỗi thì liệu có thể phát hiện hay thậm chí là sửa được lỗi hay không? Đương
+            nhiên trong quá trình xử lý dữ liệu thì không thể nào tránh khỏi được việc phát sinh lỗi nên chắc
+            chắn là lưu trữ trong bộ nhớ RAM có thể phát sinh lỗi. Vì lỗi chắc chắn là có nên ta không thể
+            thay đổi được, lúc này cái ta thật sự cần quan tâm là xác suất xảy ra lỗi là bao nhiêu thì hơn.
+        </p>
+        <br>
+
+        <p class="content">
+            Hầu hết các loại bộ nhớ RAM hiện nay đều rất đáng tin cậy. Hệ thống chỉ cần nhờ 1 bộ điều khiển
+            bộ nhớ kiểm tra lỗi lúc khởi động và gần như là có thể tin vào nó. Các chip nhớ có cơ chế kiểm
+            tra lỗi được xây dựng theo phương pháp <strong>chẵn - lẽ (parity)</strong> để kiểm tra. Cơ chế
+            hoạt động của phương pháp này rất đơn giản. Cứ mỗi 8 bits sẽ có 1 bit phụ để lưu thông tin để
+            kiểm tra.
+            <p class="content">
+                <ul>
+                    <li>
+                        <strong>Cơ chế bậc chẵn (Even Parity)</strong>: khi 8 bits trong 1 byte dữ liệu được
+                        nhận, chip nhớ sẽ tiến hành thêm 1 bit phụ vào. Bit này là tổng số bit 1 có trong 1
+                        byte dữ liệu vừa nhận được. Bit này có giá trị là 1 khi số bit 1 có trong 1 byte dữ
+                        liệu đó là lẻ, có giá trị là 0 khi số bit 1 có trong byte dữ liệu đó là chẵn. Khi dữ
+                        liệu được đọc ra việc tính toán các bit 1 được lặp lại một lần nữa so sánh với bit
+                        phụ. Nếu phù hợp với bit phụ thì kết quả của việc đọc được xem là đúng. Còn nếu
+                        không phù hợp thì chip nhớ sẽ thông báo có lỗi.
+                    </li>
+
+                    <li>
+                        <strong>Cơ chế bậc lẻ (Odd Parity)</strong>: cơ chế bậc lẻ cũng hoạt động tương tự
+                        như cơ chế bậc chẵn nhưng khác ở chỗ là khi số bit 1 là chẵn thì bit phụ có giá trị
+                        là 1, khi số bit 1 là lẻ thì bit phụ có giá trị là 0.
+                    </li>
+                </ul>
+            </p>
+        </p>
+        <br>
+
+        <p class="content">
+            Tại sao chúng ta chỉ quan tâm tới việc đếm số bit 1 thôi mà lại không đếm số bit 0? Đơn giản đó
+            là vì tính chất vật lý của chúng. Bit 1 là khi có điện còn bit 0 là khi không có điện. Khi bit
+            đó mang giá trị là 0 thì ta không chắc chắn chuyện gì đang xảy ra. Có thể xảy ra lỗi khiến cho
+            ô nhớ đó không thể mang điện hoặc có thể cúp điện,... Tóm lại việc ô nhớ đó mang bit 0 do vấn
+            đề gì ta không thể kiếm soát được trong khi ô nhớ mang bit 1 tại lại hoàn toàn có thể kiểm soát
+            được chỉ đơn giản là do ô nhớ đó có điện, ô nhớ đó hoạt động bình thường. Nên đếm theo bit 1 là
+            chắc chắn nhất. Mình chỉ nói là "nhất" thôi nha chứ không dám khẳng định 100% vì chắn chắn 100%
+            có khả năng xảy ra lỗi.
+        </p>
+        <br>
+
+        <p class="content">
+            Nhưng lại có 1 điểm yếu của cơ chế kiểm soát lỗi bên trên đó là chúng chỉ có khả năng nhận biết
+            có lỗi hay không mà thôi chứ không có cơ chế sửa lỗi. Nếu trong 1 byte dữ liệu bị sai thì chúng
+            sẽ bị bỏ qua chứ không thể sửa được. Nhưng đối với các hệ thống lớn và quan trọng thì chuyện
+            xảy ra lỗi là điều thật sự rất cần quan tâm và cần có nhiều công nghệ hiện đại hơn để tránh
+            lỗi xảy ra nhiều nhất có thể. Từ đó công nghệ <strong>Error Correction Code (ECC)</strong> ra
+            đời. Công nghệ này thường được trang bị trên các thanh RAM được sử dụng cho mục đích đặc biệt
+            nào đó và dĩ nhiên chúng rất đắt tiền. ECC có thể phát hiện lỗi và sửa lỗi nếu có thể. Mình chỉ
+            nói là nếu có thể thôi vì có nhiều trường hợp công nghệ này vẫn chưa thể giải quyết được. Cơ chế
+            hoạt động của ECC cũng tương tự như cơ chế chẵn - lẽ như trên chỉ có điều thay vì dùng 1 bit phụ
+            để kiểm tra thì ta dùng nhiều bits phụ hơn để kiểm tra thì lúc này ta sẽ có nhiều thông tin hơn để
+            kiểm tra và sửa lỗi (nhiều bao nhiêu thì còn tùy thuộc và Bus cho phép). Công nghệ ECC sử dụng
+            các thuật toán đặc biệt để giúp phát hiện lỗi và sửa lỗi, thậm chí công nghệ này còn cho phép ta
+            có thể xác định được trường hợp có nhiều hơn 1 bit trong 1 byte dữ liệu bị hỏng. Tuy nhiên từ
+            thực tế cho thấy trường hợp nhiều hơn 1 bit trong 1 byte dữ liệu bị hỏng rất ít xảy ra và nếu
+            có xảy ra thì rất tiếc công nghệ này vẫn chưa thể xử lý được. Cũng chính vì phải lưu trữ nhiều
+            hơn và phải xử lý nhiều hơn nên tốc độ của RAM được trang bị ECC sẽ chậm hơn so với RAM bình thường
+            nhưng cũng không phải quá đáng kể.
+        </p>
+        <br>
+
+        <p class="content">
+            Các loại RAM có trên thị trường hiện nay sử dụng chip nhớ <strong>không chẵn - lẻ (Nonparity)</strong>.
+            Tức là các loại RAM này không được trang bị cơ chế kiểm soát lỗi mà hoàn toàn phụ thuộc vào bộ
+            khả năng phát hiện lỗi của bộ điều khiển bộ nhớ.
+        </p>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trên đây là những kiến thức cơ bản khi nói về RAM mà ai cũng nên biết. Kiến thức mình còn hạn
+            hẹp và có thể có nhiều sai sót trong bài viết. Rất mong được mọi người đóng góp thêm ý kiến để
+            hoàn thiện cũng như trao đổi thêm kiến thức. Cảm ơn mọi người.
+        </p>
+    </main>
+
+    <footer>
+        <div class="blank"></div>
+    </footer>
+</body>
+
+</html>
