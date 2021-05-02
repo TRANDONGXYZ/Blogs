@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../../css/header.css">
+    <link rel="stylesheet" href="../../../../css/content.css">
+    <link rel="stylesheet" href="../../../../css/footer.css">
+
+    <link rel="stylesheet" href="../../../../highlighter/prism.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Làm quen với HTML và một số thẻ cơ bản</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../../../index.html">
+                <div class="logo">
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="../../../../img/logo.png" alt="Logo" class="img-logo">
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../../Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
+                <li><a href="../../../Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
+                <li><a href="#" class="nav-link">Computer Science</a></li>
+                <li><a href="#" class="nav-link">Stories</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-post">
+        <p class="written"><i>Ngày viết: 02/05/2021 - 10:39 PM</i></p> <br>
+        <h1 class="title">Làm quen với HTML và một số thẻ cơ bản</h1>
+        <h3 class="subtitle">GIỚI THIỆU</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Nếu bạn đang muốn lập 1 trang web nhưng không biết nên bắt đầu học cái gì trước thì đây
+            chính là câu trả lời dành cho bạn. Ngôn ngữ <strong>Hypertext Markup Language (HTML)</strong>
+            là ngôn ngữ có thể giúp cho bạn tạo dựng được 1 trang web và nó cũng chính là 1 trong 3 thành
+            phần cốt lõi khi nói đến web. Tuy hiện nay có rất nhiều công nghệ làm các trang web nhưng nếu
+            nói đến web mà không biết HTML thì có lẽ đó chưa phải là học làm web bằng lập trình. OK vậy
+            hôm nay ta sẽ tìm hiểu xem ngôn ngữ này có gì mà lợi hại tới vậy nha.
+        </p>
+
+        <h3 class="subtitle">ĐỊNH NGHĨA</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <strong>Hypertext Markup Language (HTML) - Ngôn ngữ đánh dấu siêu văn bản</strong> là
+            ngôn ngữ đánh dấu dữ liệu (mô tả dữ liệu), dữ liệu ở đây là siêu văn bản. Nghe khó hiểu
+            nhưng thật ra cũng không có gì quá phức tạp cả.
+        </p>
+        <br>
+
+        <p class="content">
+            Đầu tiên ta cần hiểu siêu văn bản là gì. Trước kia người ta hay đọc báo giấy hơn là báo điện
+            tử. Thông tin trên tờ báo đó được biểu diễn ở dạng văn bản và dĩ nhiên là nó không thể chuyển
+            động được. Dạng văn bản đó được gọi là văn bản bình thường. Nhưng ngày nay khi các phương
+            tiện truyền thông phát triển, ngành công nghệ phát triển đã cho ra đời báo điện tử. Trên báo
+            điện tử thì hình ảnh có thể chuyển động, có thể có cả video, audio,... Dạng văn bản này được
+            gọi là siêu văn bản. Nói tóm lại siêu văn bản là 1 dạng văn bản cho phép có các hình ảnh chuyển
+            động, video, audio,...
+        </p>
+        <br>
+
+        <p class="content">
+            Ngôn ngữ HTML này sẽ đánh dấu dữ liệu để hiển thị chúng theo 1 quy tắc nào đó. Tức là 1 trang
+            web muốn hình ảnh này được hiển thị theo quy tắc nào, muốn đoạn văn bản này hiển thị như thế
+            nào thì ngôn ngữ HTML sẽ đánh dấu các dữ liệu đó để hiển thị đúng theo ý muốn của người lập
+            trình. Đánh dấu ở đây có nghĩa là ta sẽ mô tả dữ liệu đó được hiển thị như thế nào.
+        </p>
+        <br>
+
+        <p class="content">
+            Mình cũng xin lưu ý rằng ngôn ngữ HTML <strong>không phải là ngôn ngữ lập trình</strong> mà
+            nó là <strong>ngôn ngữ đánh dấu</strong>, đánh dấu ở đây là để mô tả dữ liệu. Rất nhiều bạn
+            vẫn còn nhầm lẫn điều này. Mình biết là nhầm lẫn cái này thì cũng chẳng sao, vẫn biết code
+            thôi, vẫn làm việc và được trả lương bình thường thôi nhưng dù sao hiểu rõ vẫn hay hơn chứ
+            đúng không?
+        </p>
+
+        <h3 class="subtitle">CÁCH TẠO VÀ HIỂN THỊ TÀI LIỆU HTML</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <ul>
+                <li>
+                    Để tạo ra tài liệu HTML bạn có thể dùng bất kỳ trình soạn thảo nào mà bạn thích chỉ
+                    cần file đó có đuôi là <strong>.htm</strong> hay <strong>.html</strong>.
+                </li>
+                
+                <li>
+                    Để mở 1 file HTML bạn có thể dùng bất cứ trình duyệt nào mà bạn thích (đương nhiên
+                    trình duyệt đó nên được hỗ trợ thườngxuyên để có thể áp dụng được các tính năng mới
+                    của ngôn ngữ HTML) để mở chúng.
+                </li>
+            </ul>
+        </p>
+
+        <h3 class="subtitle">THẺ TRONG HTML</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trên định nghĩa có nói rằng đây là ngôn ngữ dùng để đánh dấu vậy thì nó đánh dấu bằng cái
+            gì? Câu trả lời là <strong>thẻ (tag)</strong>. Ngôn ngữ này dùng các loại thẻ khác nhau để
+            đánh dấu chúng hiển thị theo 1 cách nào đó để phân biệt với các nội dung khác.
+        </p>
+        <br>
+
+        <p class="content">
+            Cấu trúc của thẻ có dạng như sau:
+            <div class="formula"><strong>&lttên thẻ&gt nội dụng bị tác động bởi thẻ &lt/tên thẻ&gt</strong></div>
+        </p>
+        <br>
+
+        <p class="content">
+            Trong đó:
+            <ul>
+                <li><strong>Tên thẻ</strong>: là cách nội dung bị tác động.</li>
+                <li><strong>Nội dung bị tác động</strong>: là nội dung sẽ được áp dụng quy tắc, chức năng của thẻ.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p class="content">
+            Thông thường các thẻ trong HTML sẽ có dạng thẻ kép tức là dạng như trên bao gồm 1 thẻ mở và 1 thẻ đóng. Thẻ
+            mở là thẻ có dạng <strong>&lttên thẻ&gt</strong> và thẻ đóng có dạng <strong>&lt/tên thẻ&gt</strong>. Chúng
+            chỉ khác nhau 1 chỗ duy nhất là 1 cái có dấu <strong>/</strong>, cái còn lại thì không. Nhưng cũng có 1 số
+            loại thẻ khác có dạng: <strong>&lttên thẻ /&gt</strong>, thẻ dạng này gọi là thẻ đơn. Thẻ đơn và thẻ kép
+            cũng có cấu trúc tương tự nhau chỉ có điều thẻ đơn không có thẻ đóng mà thay vào đó là có dấu <strong>/</strong>
+            để kết thúc kết thúc thẻ. Thẻ đơn thường được sử dụng khi muốn hiển thị 1 thành phần cố định nào đó ví dụ
+            như dấu xuống dòng chẳng hạn.
+        </p>
+        
+        <h3 class="subtitle">CẤU TRÚC CHUẨN CỦA 1 TÀI LIỆU HTML</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <div class="source-code">
+                <pre class="line-numbers"><code class="language-html">&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+    Các thông tin về tài liệu
+    Các liên kết của tài liệu
+&lttitle&gtTiêu đề tài liệu&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+    Nội dung chính
+&lt/body&gt
+&lt/html&gt</code></pre>
+            </div>
+        </p>
+        <br>
+
+        <p class="content">
+            Mình sẽ giải thích 1 ít về đoạn code ở trên. Các bạn cũng đừng nên quá lo lắng về đoạn code đó, chúng
+            ta sẽ tìm hiểu sâu hơn về nó ở những bài viết tiếp theo. Giờ các bạn chỉ cần biết những thứ sau đây
+            là đủ rồi.
+        </p>
+        <br>
+
+        <p class="content">
+            Ở dòng số 1 sẽ khai báo kiểu tài liệu HTML đang sử dụng hay nói cách khác là khai báo phiên bản HTML
+            muốn sử dụng. Trong trường hợp này khai báo như trên tương đương với dùng HTML phiên bản 5 - cũng là
+            phiên bản mới nhất hiện nay.
+        </p>
+        <br>
+
+        <p class="content">
+            Từ dòng số 2 tới dòng số 11 là nội dung của thẻ HTML. Điều này nói cho trình duyệt biết rằng nội dung
+            trong đoạn này là các thông tin về trang web như đánh dấu dữ liệu. Nội dung của thẻ &lthtml&gt thường
+            được chia làm 2 phần:
+            <ul>
+                <li>
+                    Phần <strong>&lthead&gt</strong>: chứa các liên kết của trang web tới các trang tài liệu khác.
+                    Phần này cũng chứa các thông tin về trang web như tiêu đề, chủ sở hữu, thời gian tạo, các từ
+                    khóa để các công cụ tìm kiếm có thể tìm thấy,... Phần này là phần thông tin và hầu như là sẽ
+                    không hiển thị bất cứ nội dung nào ra trang web. Phần tiêu đề thì chỉ hiển thị trên các tab
+                    chứ cũng không phải là thành phần của trang web.
+                </li>
+
+                <li>
+                    Phần <strong>&ltbody&gt</strong>: phần này sẽ chứa các nội dung được hiển thị ra màn hình.
+                </li>
+            </ul>
+        </p>
+
+        <h3 class="subtitle">THUỘC TÍNH CỦA THẺ HTML, CÁCH KHAI BÁO VÀ SỬ DỤNG</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Cấu trúc của 1 thẻ có dạng dầy đủ như sau:
+            <div class="formula">
+                <strong>
+                    &lttên thẻ thuộc_tính1="giá trị" thuộc_tính2="giá trị"&gt nội dụng bị tác động bởi thẻ &lt/tên
+                    thẻ&gt
+                </strong>
+            </div>
+        </p>
+        <br>
+
+        <p class="content">
+            Cấu trúc cũng tương tự như ở trên thôi chỉ có điều là có thêm thuộc tính. Các thuộc tính phải cách nhau
+            bởi khoảng trắng và các giá trị của thuộc tính phải nằm trong dấu nháy kép. Cấu trúc của thẻ đơn cũng
+            tương tự:
+            <div class="formula"><strong>&lttên thẻ thuộc_tính1="giá trị" thuộc_tính2="giá trị" /&gt</strong></div>
+        </p>
+        <br>
+
+        <p class="content">
+            Hiện nay thì chỉ có 1 số thuộc tính cần thiết và không thể thay thế mới được sử dụng. Còn hầu hết các
+            thuộc tính dùng để định dạng thì hiện nay người ta dùng công cụ khác mạnh mẽ và uyển chuyển hơn. Chúng
+            ta cũng sẽ tìm hiểu về chúng sau giờ các bạn biết bao nhiêu đây là OK rồi.
+        </p>
+
+        <h3 class="subtitle">MỘT SỐ THẺ HTML CƠ BẢN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <ul>
+                <li>Thẻ <strong>&ltp&gt&lt/p&gt</strong>: nội dung được định dạng là <strong>đoạn văn bản</strong>.</li>
+                <li>Thẻ <strong>&ltb&gt&lt/b&gt</strong>: nội dung được định dạng <strong>in đậm</strong>.</li>
+                <li>Thẻ <strong>&lti&gt&lt/i&gt</strong>: nội dung được định dạng <strong>in nghiêng</strong>.</li>
+                <li>Thẻ <strong>&ltu&gt&lt/u&gt</strong>: nội dung được định dạng <strong>có gạch chân</strong>.</li>
+                <li>Thẻ <strong>&ltcenter&gt&lt/center&gt</strong>: nội dung được định dạng <strong>căn giữa các nội dung trống</strong>.</li>
+                <li>Thẻ <strong>&ltbr /&gt</strong>: nội dung được định dạng là <strong>dấu ngắt dòng</strong>. HTML không
+                hiểu phím Enter.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p class="content">
+            Mình cùng thực hành 1 tí đi cho dễ hiểu ha! Các bạn nên làm theo từng dòng để thấy được tác động của các thẻ.
+            <br> <br>
+            Mã nguồn:
+            <div class="source-code">
+                <pre class="line-numbers"><code class="language-html">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &lttitle&gtMy Document&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+    &ltp&gtĐoạn văn bản 1&lt/p&gt
+    &ltp&gtĐoạn văn bản 2&lt/p&gt
+    &ltb&gtNội dung được in đậm&lt/b&gt &ltbr&gt
+    &lti&gtNội dung được in nghiêng&lt/i&gt &ltbr&gt
+    &ltu&gtNội dung được gạch chân&lt/u&gt
+    &ltcenter&gtNội dung được canh giữa&lt/center&gt
+&lt/body&gt
+&lt/html&gt</code></pre>
+            </div>
+            <br><br>
+            Hiển thị:
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/hienthi.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Kết quả</i>
+                </div>
+            </div>
+        </p>
+        <br>
+
+        <p class="content">
+            Các bạn có thể thấy là hiệu ứng thẻ p là nó tạo ra 1 đoạn văn bản riêng, tự động xuống dòng để phân tách đoạn
+            văn bản, thẻ b thì in đậm, thẻ i thì in nghiêng, thẻ u thì gạch dưới, thẻ br thì xuống dòng, thẻ center thì
+            canh giữa. Các bạn cứ chạy từng dòng là sẽ thấy được hiệu ứng của chúng.
+        </p>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trên đây là những điều cơ bản nhất về HTML mà các bạn phải biết khi nói đến HTML. Vậy thôi. Nếu có gì sai sót
+            mong được các bạn chỉ giáo thêm.
+        </p>
+    </main>
+
+    <footer>
+        <div class="blank"></div>
+    </footer>
+
+    <script src="../../../../highlighter/prism.js"></script>
+</body>
+
+</html>

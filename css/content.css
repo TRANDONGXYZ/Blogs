@@ -131,3 +131,8 @@ ul {
     border: 4px red solid;
     border-radius: 15px;
 }
+
+.source-code {
+    max-height: 700px;
+    overflow: auto;
+}
