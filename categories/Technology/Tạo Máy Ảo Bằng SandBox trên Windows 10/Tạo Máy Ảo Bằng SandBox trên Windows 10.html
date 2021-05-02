@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="../../../css/content.css">
+    <link rel="stylesheet" href="../../../css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Tạo Máy Ảo Bằng SandBox trên Windows 10</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../../index.html">
+                <div class="logo">
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="../../../img/logo.png" alt="Logo" class="img-logo">
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
+                <li><a href="../../Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
+                <li><a href="#" class="nav-link">Computer Science</a></li>
+                <li><a href="#" class="nav-link">Stories</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-post">
+        <p class="written"><i>Ngày viết: 02/05/2021 - 10:49 AM</i></p> <br>
+        <h1 class="title">TẠO MÁY ẢO BẰNG SANDBOX TRÊN WINDOWS 10</h1>
+        <h3 class="subtitle">GIỚI THIỆU</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Chào các bạn. Các bạn có từng cài 1 phần mềm nào đó mà sử dụng đúng 1 lần thôi không? Các bạn có từng cài
+            phần mềm mà lo sợ về việc Virus có thể tấn công hay không? Nếu có thì đây là tin vui dành
+            cho bạn. Hiện nay trên 1 vài phiên bản Windows đã hỗ trợ tạo máy ảo trực tiếp trên Windows
+            mà không cần phần mềm bên thứ 3. Để hiểu rõ hơn về công cụ này các bạn hãy theo dõi bài viết
+            bên dưới nha!
+        </p>
+
+        <h3 class="subtitle">MÁY ẢO LÀ GÌ?</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Đầu tiên các bạn cần hiểu máy ảo là gì trước. <strong>Máy ảo (Virtual Machine)</strong> có
+            thể hiểu là có 1 máy tính khác đang chạy trong máy tính của bạn. Máy tính đang chạy ở trong
+            máy tính của bạn được gọi là máy ảo. Nghe đỉnh nhỉ, trong 1 máy tính lại có 1 máy tính khác
+            đang chạy?
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/SandBox.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Sử dụng SandBox để tạo máy ảo trên Windows 10</i>
+                </div>
+            </div>
+        </p>
+        <br>
+
+        <p class="content">
+            Giờ mình sẽ gọi máy ảo là máy khách và máy cho phép chạy máy ảo là máy chủ cho tiện. Các máy
+            khách sẽ được máy chủ quản lý, chia sẻ tài nguyên để vận hành giống như 1 máy chủ bình thường.
+            Máy khách được chạy dưới dạng 1 ứng dụng nên tất cả phải chịu sự quản lý của hệ điều hành của
+            máy chủ. Toàn bộ tài nguyên của máy ảo sẽ được phân tách và độc lập hoàn toàn với tài nguyên
+            khác và đây chính là đặc điểm tạo nên giá trị của nó. Tài nguyên của nó hoàn toàn độc lập với
+            các tài nguyên còn lại nên nếu máy ảo của ta có bị tấn công thì ta chỉ việc xóa máy ảo đó đi
+            là xong, không ảnh hưởng gì đến máy chủ của ta hết.
+        </p>
+
+        <h3 class="subtitle">CÔNG DỤNG CỦA MÁY ẢO</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Máy ảo có rất nhiều ứng dụng quan trọng như:
+            <ul>
+                <li>Kiểm thử phần mềm.</li>
+                <li>Có thể tạo nhiều máy tính khi không có máy tính máy tính vật lý.</li>
+                <li>Trải nghiệm và sử dụng nhiều hệ điều hành trên 1 máy tính.</li>
+                <li>Và còn rất nhiều nữa...</li>
+            </ul>
+        </p>
+
+        <h3 class="subtitle">TẠO MÁY ẢO THÔI!</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Đầu tiên các bạn cần thỏa mãn 1 vài điều kiện để có được trải nghiệm tốt nhất:
+            <ul>
+                <li>Windows 10 Pro, Enterprise, Education từ build 18305 trở lên <strong>(bắt buộc)</strong>.</li>
+                <li>Tối thiểu 4GB RAM nhưng khuyến khích từ 8GB RAM trở lên.</li>
+                <li>Tối thiểu 1 GB ổ cứng, nên dùng SSD để có trải nghiệm tốt nhất.</li>
+                <li>CPU ít nhất 2 nhân để không bị đuối, nói chung i5 trở lên là OK.</li>
+            </ul>
+        </p>
+        <br>
+
+        <p class="content">
+            Đầu tiên ta cần kiểm tra có thỏa mãn các điều kiện trên trước bằng cách nhấn
+            tổ hợp phím <strong>Win + R</strong>, sẽ xuất hiện hộp thoại <strong>Run</strong>,
+            bạn hãy nhập <strong>dxdiag</strong> rồi Enter để xem thông tin phần cứng máy
+            tính của bạn.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/run.png" alt="" class="img-discribe" style="width: 700px"><br>
+                    <i class="discribe">Hộp thoại Run</i>
+                </div>
+            </div>
+            Một cửa sổ thông tin phần cứng máy bạn sẽ xuất hiện và bạn hãy kiểm tra các
+            điều kiện trên.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/dxdiag.svg" alt="" class="img-discribe"><br>
+                    <i class="discribe">Thông tin phần cứng của máy tính</i>
+                </div>
+            </div>
+            Tiếp theo các bạn cần kiểm tra đã bật chế độ <strong>Ảo hóa (Virtualization)</strong>
+            bằng cách nhập vào ô tìm kiếm <strong>Task Manager</strong>.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/searchTaskManager.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Chọn Task Manager</i>
+                </div>
+            </div>
+            Chọn qua tab <strong>Performance</strong>
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/enableVirtualization.svg" alt="" class="img-discribe"><br>
+                    <i class="discribe">Kích hoạt chế độ ảo hóa</i>
+                </div>
+            </div>
+            Của mình là đã bất chế độ ảo hóa rồi, bạn nào chưa bật thì có thể vào BIOS để bật nha.
+            Tiếp theo các bạn cần bật tính năng SandBox lên. Các bạn search <strong>Windows Features</strong>
+            và chọn mục đầu tiên.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/searchWindowsFeatures.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Windows Features</i>
+                </div>
+            </div>
+            Của số Windows Features hiện ra, các bạn tìm phần <strong>Windows Sandbox</strong> và tích
+            vào để kích hoạt tính năng này. Sau đó nhấn OK và chờ cài đặt thôi. Nếu máy có yêu cầu bạn
+            Reset máy thì các bạn cứ Reset để thiết lập các cài đặt. cũng nhanh thôi à.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/checkWindowsSandob.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Kích hoạt Windows Sandbox</i>
+                </div>
+            </div>
+            Gần xong rồi! Giờ mình tìm kiếm Sandbox để chạy thôi. Quá trình khởi động có thể nhanh hay
+            chậm tùy vào máy của bạn nhưng cũng nhanh thôi à.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/searchSandbox.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Chạy Sandbox</i>
+                </div>
+            </div>
+            Và đây là thành quả của chúng ta. Tèn ten.
+            <div class="pictures">
+                <div class="picture">
+                    <img src="./img/opensandbox.png" alt="" class="img-discribe"><br>
+                    <i class="discribe">Thành công!</i>
+                </div>
+            </div>
+        </p>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Trên đây là cách kích hoạt và khởi động Windows Sandbox của Windows 10. Các bạn có thể
+            thử cho biết. Tất nhiên là có nhiều cách để chạy máy ảo như dùng công cụ Virtual Box,
+            VMWare,... nhưng cá nhân mình vẫn thích dùng những thứ có sẵn, không cần phải lăn tăn
+            về bảo mật cũng như do được tích hợp sẵn nên thường sẽ luôn mượt hơn phần mềm bên thứ 3.
+            Nếu các bạn có bất kỳ thắc mắc hay góp ý nào thì hãy giúp mình nha. Mình cảm ơn.
+        </p>
+    </main>
+
+    <footer>
+        <div class="blank"></div>
+    </footer>
+</body>
+
+</html>
