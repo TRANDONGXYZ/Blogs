@@ -136,3 +136,16 @@ ul {
     max-height: 700px;
     overflow: auto;
 }
+
+.link-post {
+    color: mediumblue;
+}
+
+.table-post {
+    display: flex;
+    justify-content: center;
+}
+
+td, th {
+    padding: 10px;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../../css/header.css">
+    <link rel="stylesheet" href="../../../../css/content.css">
+    <link rel="stylesheet" href="../../../../css/footer.css">
+
+    <link rel="stylesheet" href="../../../../highlighter/prism.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <title>Những cú pháp Selector cơ bản trong CSS3</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../../../index.html">
+                <div class="logo">
+                    <p class="name">Website<span class="bold">Learners</span></p>
+                    <img src="../../../../img/logo.png" alt="Logo" class="img-logo">
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../../../Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
+                <li><a href="../../../Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
+                <li><a href="#" class="nav-link">Computer Science</a></li>
+                <li><a href="#" class="nav-link">Stories</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-post">
+        <p class="written"><i>Ngày viết: 03/05/2021 - 07:45 PM</i></p> <br>
+        <h1 class="title">Những cú pháp Selector cơ bản trong CSS3</h1>
+        <h3 class="subtitle">GIỚI THIỆU</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Chào mọi người. Hôm nay chúng ta sẽ học 1 chủ đề mới vô cùng quan trọng CSS và bạn phải
+            thường xuyên làm việc với nó. Như mình đã giới thiệu trong bài học
+            <a href="../../Hypertext Markup Language/Làm quen với HTML và một số thẻ cơ bản/Làm quen với HTML và một số thẻ cơ bản.html" class="link-post">Làm quen với HTML và một số thẻ cơ bản</a>
+            này thì ngôn ngữ HTML dùng để đánh dấu văn bản này hiển thị theo cách này, văn bản kia
+            hiển thị theo cách kia, vậy ngôn ngữ này dùng cái gì để đánh dấu? Và nếu đã đánh dấu rồi
+            thì làm sao để tìm đến được những nội dung đó để thay đổi cách hiển thị của chúng? Đó
+            là chức năng của CSS Selector và chúng sẽ tìm hiểu chúng trong bài học này. Bắt đầu thôi!
+        </p>
+
+        <h3 class="subtitle">ĐỊNH NGHĨA</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <strong>Selector (bộ chọn)</strong> có thể được hiểu 1 cách đơn giản là cách mà chúng ta
+            chọn để truy xuất đến đối tượng mà ta đang quan tâm. Các đối tượng được đánh dấu bởi các
+            thuộc tính trong thẻ HTML để phân biệt và định danh chúng so với các đối tượng khác. Các
+            thuộc tính này không có chức năng gì về mặt hiển thị mà chỉ có chức năng định danh thôi.
+        </p>
+        <br>
+
+        <p class="content">
+            Mình có để <a href="https://drive.google.com/file/d/0B3HHHDrSHiPsVi1VU0d4a2xRUTg/view?usp=sharing" class="link-post">danh sách các selector thông dụng</a>
+            ở đây và bên dưới, các bạn có thể tải về để học và xem lại nếu quên. Tương đối cũng khá nhiều
+            nên các bạn cũng không cần phải học hết ngay bây giờ đâu mà các bạn chỉ cần quan tâm 5 hay 6
+            selector đầu tiên thôi là đủ rồi, phần còn lại khi nào cần lấy ra học là ok.
+        </p>
+        <br>
+
+        <p class="content">
+            Giờ mình đi tìm hiểu sơ về từng cái 1 nha.
+        </p>
+
+        <h3 class="subtitle">CẤU TRÚC CỦA NGÔN NGỮ CSS</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Cấu trúc hiện tại của phiên bản CSS3 hiện nay có dạng như sau:
+<pre class="line-numbers"><code class="language-css">selector {
+    thuộc_tính1: giá_trị_1;
+    thuộc_tính2: giá_trị_2;
+    ...
+}</code></pre>
+        </p>
+        <br>
+
+        <p class="content">
+            Trong đó:
+            <ul>
+                <li>
+                    <strong>selector</strong>: đối tượng mà ta muốn chọn ra
+                    để định dạng cách hiển thị.
+                </li>
+                
+                <li>
+                    <strong>thuộc_tính1, thuộc_tính2</strong>: những yếu tố
+                    của đối tượng mà ta muốn thay đổi định dạng. Ví dụ như
+                    font chữ, kích thước chữ,...
+                </li>
+
+                <li>
+                    <strong>giá_trị_1, giá_trị_2</strong>: giá trị mới đặt
+                    cho các yếu tố cần thay đổi của đối tượng. Ví dụ như ta
+                    muốn thay đổi cỡ chữ thành 15 thì giá trị 15 này sẽ được
+                    đặt cho các thuộc tính cần thay đổi.
+                </li>
+            </ul>
+        </p>
+
+        <h3 class="subtitle">CÁC SELECTOR THÔNG DỤNG</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Đây là bảng các selector thông dụng:
+            <div class="table-post">
+                <table border="1" cellspacing="0">
+                    <th>Selector</th>
+                    <th>Ví dụ</th>
+                    <th>Ý nghĩa</th>
+                    <th>Cách sử dụng</th>
+    
+                    <tr>
+                        <td class="cell">.class</td>
+                        <td class="cell">.class1</td>
+                        <td class="cell">Chọn toàn bộ thẻ có thuộc tính class là class1.</td>
+                        <td class="cell">Trước tên class phải có dấu chấm ".".</td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">#id</td>
+                        <td class="cell">#id1</td>
+                        <td class="cell">Chọn thẻ có thuộc tính id là id1.</td>
+                        <td class="cell">Trước tên id phải có dấu thăng "#".</td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">*</td>
+                        <td class="cell">*</td>
+                        <td class="cell">Chọn toàn bộ thẻ trong tài liệu HTML.</td>
+                        <td class="cell">Chỉ cần ghi dấu sao "*".</td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">div</td>
+                        <td class="cell">p</td>
+                        <td class="cell">Chọn toàn bộ thẻ div có trong tài liệu HTML.</td>
+                        <td class="cell">Chỉ cần ghi tên thẻ.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">div, span</td>
+                        <td class="cell">div, span, p</td>
+                        <td class="cell">Chọn những thẻ div, span có trong tài liệu HTML.</td>
+                        <td class="cell">Liệt kê các tên thẻ muốn được định dạng cách nhau bởi dấy phẩy ",".</td>
+                    </tr>
+                </table>
+            </div>
+        </p>
+        <br>
+
+        <p class="content">
+            Trên đây là danh sách 5 selector được dùng nhiều nhất. Vẫn còn rất nhiều nhưng hiện giờ các
+            bạn chỉ cần biết và hiểu rõ về 5 selector này là đủ rồi.
+        </p>
+
+        <h3 class="subtitle">VÍ DỤ ĐƠN GIẢN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Đây là một mã nguồn ví dụ đơn giản để các bạn có thể thấy được hiệu ứng của chúng. Các bạn
+            chưa cần hiểu về các thuộc tính và giá trị đâu chỉ cần thấy được cách chúng được sử dụng
+            như thế nào thôi.<br> <br>
+            Mã nguồn CSS:
+            <pre class="line-numbers"><code class="language-css">.class1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+            
+#id1 {
+    color: red;
+}
+            
+* {
+    font-size: 20px;
+}
+            
+div {
+    font-style: italic;
+}
+            
+b, u {
+    font-size: 30px;
+    font-weight: bold;
+}</code></pre>
+<br>
+Mã nguồn HTML:
+<pre class="line-numbers"><code class="language-html">&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+        &lttitle&gtDocument&lt/title&gt
+        &ltlink rel="stylesheet" href="style.css"&gt
+&lt/head&gt
+&ltbody&gt
+        Định dạng thông thường. Tất cả các chữ đều có kích cỡ là 20px trừ dòng cuối.
+        &ltp class="class1"&gtThay đổi font chữ.&lt/p&gt    <!--Do có class = "class1"-->
+        &ltp id="id1">Thay đổi font chữ.&lt/p&gt            <!--Do có id = "id1"-->
+        &ltdiv&gtNội dung được in nghiêng.&lt/div&gt        <!--Do loại thẻ này là thẻ div-->
+        &ltdiv&gtNội dung được in nghiêng.&lt/div&gt        <!--Do loại thẻ này là thẻ div-->
+        &ltb&gtNội dung được in đậm.&lt/b&gt                <!--Do có có tên thẻ là b và u nên được áp-->
+        &ltu&gtNội dung được gạch chân.&lt/u&gt             <!--dụng in đậm và kích cỡ chữ 30px-->
+&lt/body&gt
+&lt/html&gt</code></pre>
+        </p>
+        <br>
+
+        <p class="content">
+            Các bạn thử chạy từng dòng để xem cách các nội dung bị tác động nha. Vậy sẽ dễ hiểu hơn.
+        </p>
+
+        <h3 class="subtitle">KẾT LUẬN</h3>
+        <div class="underline"></div>
+        <p class="content">
+            Về các selector cơ bản thì các bạn cần nắm rõ những kiến thức này trước khi đi tiếp đến
+            các selector nâng cao hơn. Mình có để 1 số tài liệu tham khảo bên dưới để các bạn tham
+            khảo thêm nếu có ý định tìm hiểu sâu hơn. Vậy thôi, nếu có đóng góp hay thắc mắc gì thì
+            liên hệ mình để mình biết nha. Mình cảm ơn vì đã dành thời gian theo dõi bài viết của
+            mình. Hẹn gặp lại ở các bài viết tiếp theo.
+        </p>
+
+        <h3 class="subtitle">TÀI LIỆU THAM KHẢO</h3>
+        <div class="underline"></div>
+        <p class="content">
+            <ul>
+                <li>
+                    <a href="https://drive.google.com/file/d/0B3HHHDrSHiPsYnBseW9fSkhpQWs/view?usp=sharing" class="link-post">Danh sách các selector đầy đủ.</a>
+                </li>
+
+                <li>
+                    <a href="https://youtu.be/fvauNPWQeb8" class="link-post">Video tham khảo.</a>
+                </li>
+            </ul>
+        </p>
+    </main>
+
+    <footer>
+        <div class="blank"></div>
+    </footer>
+
+    <script src="../../../../highlighter/prism.js"></script>
+</body>
+
+</html>
