@@ -149,3 +149,24 @@ ul {
 td, th {
     padding: 10px;
 }
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.video {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.video-discribe {
+    width: 80%;
+}
+
+.discribe {
+    font-size: 17px;
+}
+
