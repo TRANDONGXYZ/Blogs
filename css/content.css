@@ -157,6 +157,7 @@ td, th {
 }
 
 .video {
+    width: 100%;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -165,8 +166,3 @@ td, th {
 .video-discribe {
     width: 80%;
 }
-
-.discribe {
-    font-size: 17px;
-}
-
