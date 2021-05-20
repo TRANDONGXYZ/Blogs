@@ -16,7 +16,7 @@ function handleNavLink() {
     }
     else {
         menu.setAttribute("style", "display: none;");
-        menu.setAttribute("style", "transform: translateX(100%);");
+        menu.setAttribute("style", "transform: translateX(70%);");
         handleNavLink.isOpen = false;
         console.log(handleNavLink.isOpen);
     }
