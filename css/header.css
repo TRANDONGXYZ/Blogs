@@ -5,192 +5,67 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+#header {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    background-color: aqua;
+}
+
+#header .header {
+    width: 100%;
+    height: 100%;
+}
+
+#header .nav-bar {
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#header .nav-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
-    color: black;
-    background-image: url(/background/5313770.jpg);
-    background-size: cover;
-    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    background-color: cadetblue;
+    list-style: none;
+    transition: 0.5s left;
 }
 
-header {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 2000px;
-}
-
-nav p {
+#header .nav-list ul a {
+    font-weight: 300;
     font-size: 20px;
-}
-
-nav a {
-    color: black;
+    margin-top: 20px;
+    letter-spacing: 0.1rem;
     text-decoration: none;
+    color: white;
 }
 
-nav p span {
-    font-weight: 700;
-    font-size: 30px;
-    font-family: "Poppins", sans-serif;
+#header .nav-list ul a:hover {
+    color: crimson;
 }
 
-.logo-website {
-    display: flex;
-    align-items: center;
-}
-
-nav .logo-website img {
-    height: 70px;
-}
-
-#nav-link {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-}
-
-nav #nav-link a {
-    transition: 0.2s;
-}
-
-nav #nav-link a:hover {
-    transform: translateY(-5px);
-}
-
-#hamburger {
-    cursor: pointer;
-    width: 20px;
-    display: none;
-}
-
-#menu {
-    display: none;
-}
-
-@media screen and (max-width: 1200px) {
-    nav p {
-        font-size: 15px;
-    }
-
-    nav p span {
-        font-weight: 700;
-        font-size: 20px;
-    }
-
-    nav .logo-website img {
-        height: 50px;
-    }
-
-    #nav-link {
-        display: flex;
-        width: 60%;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    nav p {
-        display: none;
-    }
-
-    nav .logo-website img {
-        height: 50px;
-    }
-
-    #nav-link {
-        display: none;
-    }
-
-    #hamburger {
-        display: block;
-    }
-
-    #menu {
-        display: flex;
-        width: 50%;
-        height: calc(100vh - 50px);
-        right: -50%;
-        top: 50px;
-        background-color: aqua;
-        position: absolute;
-        transition: transform 0.5s;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #menu div {
-        width: 100%;
-        height: 280px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #hamburger:hover + #menu {
-        transform: translateX(-100%);
-    }
+#header .nav-bar .bar {
+    width: 3px;
+    height: 2px;
+    background-color: black;
 }
 
 
-@media screen and (max-width: 500px) {
-    body {
-        overflow-x: hidden;
-    }
 
-    nav p {
-        display: none;
-    }
 
-    nav .logo-website img {
-        height: 50px;
-    }
 
-    #nav-link {
-        display: none;
-    }
-
-    #hamburger {
-        display: block;
-    }
-
-    #menu {
-        display: flex;
-        width: 80%;
-        height: calc(100vh - 50px);
-        right: -80%;
-        top: 50px;
-        background-color: aqua;
-        position: absolute;
-        transition: transform 0.5s;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #menu div {
-        width: 100%;
-        height: 280px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #hamburger:hover + #menu {
-        transform: translateX(-100%);
-    }
+#header:hover ul {
+    left: 0;
 }
