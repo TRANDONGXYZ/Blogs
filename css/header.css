@@ -13,7 +13,7 @@ img {
 }
 
 body {
-    background-image: url(./background/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-98aZLNQxJXg.jpg);
+    background-image: url(/background/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-98aZLNQxJXg.jpg);
     background-size: cover;
     min-height: 100vh;
     background-position: center center;
