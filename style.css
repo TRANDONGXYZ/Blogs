@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Start General Section */
+html {
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    background-image: url(./background/background-light.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: black;
+    transition: 0.3s background-image;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* End General Section */
+
+/* Start Header Section */
+#header {
+    width: 100vw;
+    height: 60px;
+    /* background-color: antiquewhite; */
+}
+
+#header li {
+    list-style: none;
+}
+
+#header header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header nav {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: cadetblue; */
+}
+
+#header #logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* order: 0; */
+}
+
+#header #logo h2 {
+    font-weight: normal;
+    font-size: 23px;
+}
+
+#header #logo h2 span {
+    font-weight: 700;
+    font-size: 27px;
+}
+
+#header #logo div {
+    width: 50px;
+    height: 50px;
+}
+
+#header #nav-list {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header #nav-list #nav-links {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #nav-list #nav-links a {
+    transition: 0.2s;
+    transition-property: transform, color;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#header #nav-list #nav-links a:hover {
+    transform: translateY(-5px);
+    color: crimson;
+}
+
+#header #mode {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url(./old/img/moon.svg);
+    transition: 0.3s background-image;
+    /* order: 1; */
+}
+
+#header #hamburger {
+    display: none;
+}
+/* Eng Header Section */
+
+
+/* Start Posts - Explores Section */
+main {
+    width: 100vw;
+    background-color: cadetblue;
+}
+
+#main .wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main .grid {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 0 20px;
+    background-color: darksalmon;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 100px auto;
+    column-gap: 20px;
+}
+
+#main #recent-posts {
+    grid-column: 1 / 3;
+    background-color: deeppink;
+    display: flex;
+    align-items: center;
+}
+
+#main #posts {
+    width: 100%;
+    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
+}
+
+#main .post {
+    width: 100%;
+    height: 250px;
+    background-color: gold;
+}
+
+#main #explores {
+    width: 100%;
+    height: 100px;
+    background-color: darkslategray;
+}
+
+
+
+
+
+
+/* End Posts - Explores Section */
+
+
+
+
+
+/* Start Dark Mode Section */
+body.dark {
+    background-image: url(./background/background-dark.jpg);
+    color: white;
+}
+
+a.dark {
+    color: white;
+}
+
+#header #mode.dark {
+    background-image: url(./old/img/sun.svg);
+}
+/* End Dark Mode Section */
+
+
+
+
+
+
+
+/* Start Other Media */
+@media screen and (max-width: 1000px) {
+    #header #logo h2 {
+        display: none;
+    }
+
+    #header #nav-list {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #header #nav-list {
+        width: 90px;
+        height: auto;
+    }
+
+    #header #nav-list #nav-links {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: chocolate;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        z-index: 1;
+        transition: 0.5s left;
+    }
+
+    #header #nav-list #nav-links.open {
+        left: 0;
+    }
+
+    #header #nav-list #nav-links a {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    #header #nav-list #nav-links a:hover {
+        transform: scale(1.07);
+        color: chartreuse;
+    }
+
+    #header #hamburger {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /* background-color: coral; */
+        border: 3px darksalmon solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+        transform: scale(0.9);
+        /* order: 2; */
+    }
+
+    #header #hamburger::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 3px darksalmon solid;
+        border-radius: 50%;
+        margin: 0;
+        padding: 0;
+        left: -3px;
+        top: -3px;
+        position: absolute;
+        animation: hamburger_puls 1s infinite;
+    }
+
+    #header #hamburger #bar {
+        width: 30px;
+        height: 2px;
+        background-color: darksalmon;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    #header #hamburger #bar::before, #header #hamburger #bar::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: darksalmon;
+        border-radius: 3px;
+        position: absolute;
+    }
+
+    #header #hamburger #bar::before {
+        bottom: 8px;
+        transition: 0.5s bottom;
+    }
+
+    #header #hamburger #bar::after {
+        top: 8px;
+        transition: 0.5s top;
+    }
+
+    #header #hamburger.open #bar::before{
+        bottom: 0px;
+    }
+
+    #header #hamburger.open #bar::after {
+        top: 0px;
+    }
+}
+/* End Other Media */
+
+
+
+/* Start Keyframes Section */
+@keyframes hamburger_puls {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+/* End Keyframes Section */

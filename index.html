@@ -1,310 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/content.css">
-    <link rel="stylesheet" href="./css/categories.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <title>My Blogs</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <title>My Blogs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="./index.html">
-                <div class="logo">
-                    <p class="name">Website<span class="bold">Learners</span></p>
-                    <img src="./img/logo.png" alt="Logo" class="img-logo">
+    <section id="header">
+        <header>
+            <nav>
+                <a href="#" id="logo">
+                    <h2>do<span>Something</span></h2>
+                    <div><img src="./old/img/avatar.png" alt=""></div>
+                </a>
+
+                <div id="nav-list">
+                    <div id="nav-links">
+                        <a href="./categories/Mathematics/Mathematics.html">Mathematics</a>
+                        <a href="./categories/Algorithms/Algorithms.html">Algorithms</a>
+                        <a href="#">Computer Science</a>
+                        <a href="#">Stories</a>
+                        <a href="#">Contact</a>
+                    </div>
+
+                    <div id="mode" title="Dark mode"></div>
+
+                    <div id="hamburger">
+                        <div id="bar"></div>
+                    </div>
                 </div>
-            </a>
+            </nav>
+        </header>
+    </section>
 
-            <ul class="nav-links">
-                <li><a href="./categories/Mathematics/Mathematics.html" class="nav-link">Mathematics</a></li>
-                <li><a href="./categories/Algorithms/Algorithms.html" class="nav-link">Algorithms</a></li>
-                <li><a href="#" class="nav-link">Computer Science</a></li>
-                <li><a href="#" class="nav-link">Stories</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- <main id="main">
+        <div class="wrapper">
+            <div class="grid">
+                <div id="recent-posts"><h4>Recent posts</h4></div>
+                <div id="posts">
+                    <div class="post">
 
-    <main>
-
-        <!-- Start Posters -->
-
-        <!-- <img src="./img/memory.gif" alt="poster" class="poster"> -->
-
-        <!-- End Posters -->
-
-
-
-        <!-- Start Posts and Explore -->
-
-        <div class="posts-explores">
-            <div class="posts">
-                <p class="recent">Recent posts</p>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/digital-clock.png" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a>
-                                </p>
-                            </div>
-                            <a href="./projects/digital-clock/digital-clock-project.html" class="title">Digital Clock</a>
-                        </div>
-                        <div class="time-publish-post">08/05/2021 - 02:26 AM</div>
                     </div>
                 </div>
 
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/using-computer.png" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Technology</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Technology/Sử dụng máy tính nhanh và dễ dàng hơn/Sử dụng máy tính nhanh và dễ dàng hơn.html" class="title">Sử dụng máy tính nhanh và dễ dàng hơn</a>
-                        </div>
-                        <div class="time-publish-post">05/05/2021 - 03:26 PM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/selector.jpg" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Programming Language</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Programming Language/Cascading Style Sheet/Những cú pháp Seletor cơ bản trong CSS3/Những cú pháp Selector cơ bản trong CSS3.html" class="title">Những cú pháp Selector cơ bản trong CSS3</a>
-                        </div>
-                        <div class="time-publish-post">03/05/2021 - 07:45 PM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/introduction-html.png" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Programming Language</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Programming Language/Hypertext Markup Language/Làm quen với HTML và một số thẻ cơ bản/Làm quen với HTML và một số thẻ cơ bản.html" class="title">Làm quen với HTML và một số thẻ cơ bản</a>
-                        </div>
-                        <div class="time-publish-post">02/05/2021 - 10:39 PM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/WindowsSandbox.png" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Technology</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Technology/Tạo Máy Ảo Bằng SandBox trên Windows 10/Tạo Máy Ảo Bằng SandBox trên Windows 10.html" class="title">Tạo máy ảo bằng SandBox trên Windows 10</a>
-                        </div>
-                        <div class="time-publish-post">02/05/2021 - 10:49 AM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/internet.png" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Network</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Computer Network/Internet/Internet.html" class="title">Internet là gì?</a>
-                        </div>
-                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/ram.svg" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Architecture</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Computer Architecture/RAM/RAM.html" class="title">Random Access Memory (RAM) là gì?</a>
-                        </div>
-                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="border-img-post"><img src="./img/psu.svg" alt="" class="img-post"></div>
-                    <div class="info-post">
-                        <div class="topic-title">
-                            <div class="topic">
-                                <img src="./img/avatar.svg" alt="" class="avatar">
-                                <p class="author-topic">
-                                    <a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Computer Architecture</a>
-                                </p>
-                            </div>
-                            <a href="./categories/Computer Architecture/Power Supply Unit/Power Supply Unit.html" class="title">Power Supply Unit (PSU) là gì?</a>
-                        </div>
-                        <div class="time-publish-post">Thứ 5 - 22/04/2021 - 05:06 PM</div>
-                    </div>
+                <div id="explores">
+                    
                 </div>
             </div>
-
-            <div class="explores">
-                <div class="item-explore">
-                    <div class="content-explore">
-                        <p class="title-explore">Introduction</p>
-                        <div class="underline-explore"></div>
-                        <div class="myself">
-                            <img src="./img/avatar.svg" alt="avatar" id="avatar-introduction">
-                            <div class="my-name">Tran Dong</div>
-                            <div class="position">
-                                <img src="./img/position.svg" class="marker">
-                                <p class="name-position">Ho Chi Minh City</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-explore">
-                    <div class="content-explore">
-                        <p class="title-explore">Categories</p>
-                        <div class="underline-explore"></div>
-                        <div class="categories">
-                            <a href="./categories/Algorithms/Algorithms.html" class="link-category">Algorithms</a>
-                            <a href="./categories/Mathematics/Mathematics.html" class="link-category">Mathematics</a>
-                            <a href="./categories/Computer Network/Computer Network.html" class="link-category">Computer Network</a>
-                            <a href="" class="link-category">Computer Security</a>
-                            <a href="./categories/Computer Architecture/Computer Architecture.html" class="link-category">Computer Architecture</a>
-                            <a href="./categories/Programming Language/Programming Language.html" class="link-category">Programming Language</a>
-                            <a href="./categories/Technology/Technology.html" class="link-category">Technology</a>
-                            <a href="" class="link-category">Games</a>
-                            <a href="" class="link-category">Stories</a>
-                            <a href="./projects/projects.html" class="link-category">Projects</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-explore">
-                    <div class="content-explore">
-                        <p class="title-explore">Products</p>
-                        <div class="underline-explore"></div>
-                        <div class="categories">
-                            <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
-                            <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
-                            <a href="./projects/Countdown Timer/countdown-timer.html" class="link-category">Countdown Timer</a>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- End Explores -->
         </div>
+    </main> -->
 
-        <!-- End Posts and Explore -->
+    <div id="temp" style="height: 1000px;"></div>
 
+    <section id="footer"></section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <div class="container-categories">
-            <a href="./Content/Algorithms/Algorithms.html" class="item">
-                <img src="./img/algorithm.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Algorithms</p>
-                </div>
-            </a>
-
-            <a href="./Content/Math/Math.html" class="item">
-                <img src="./img/mathematics.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Mathematics</p>
-                </div>
-            </a>
-
-            <a href="./Content/Programming Language/Programming Language.html" class="item">
-                <img src="./img/programming language.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Programming Language</p>
-                </div>
-            </a>
-
-            <a href="./Content/Computer Architecture/Computer Architecture.html" class="item">
-                <img src="./img/CPU.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Computer Architecture</p>
-                </div>
-            </a>
-
-            <a href="./Content/Computer Network/Computer Network.html" class="item">
-                <img src="./img/computer network.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Computer Network</p>
-                </div>
-            </a>
-
-            <a href="./update.html" class="item">
-                <img src="./img/computer security 1.png" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Computer Security</p>
-                </div>
-            </a>
-
-            <a href="./update.html" class="item">
-                <img src="./img/technology.jpg" class="icon-categories">
-                <div class="info">
-                    <p class="title-categories">Technology</p>
-                </div>
-            </a>
-        </div> -->
-    </main>
-
-    <footer>
-        <div class="blank"></div>
-    </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
