@@ -15,6 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     color: black;
     transition: 0.3s background-image;
@@ -30,8 +31,57 @@ img {
     height: 100%;
     object-fit: cover;
 }
-
 /* End General Section */
+
+
+
+/* Start Scroll Bar Section */
+/* ::-webkit-scrollbar {
+    width: 3px;
+} */
+
+/* #scroll-path {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+#progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+
+#progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+} */
+/* End Scroll Bar Section */
+
+
 
 /* Start Header Section */
 #header {
@@ -131,13 +181,11 @@ img {
 /* Start Posts - Explores Section */
 main {
     width: 100vw;
-    background-color: cadetblue;
 }
 
 #main .wrapper {
     width: 100%;
     height: 100%;
-    background-color: chartreuse;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +196,6 @@ main {
     max-width: 1440px;
     height: 100%;
     padding: 0 20px;
-    background-color: darksalmon;
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-rows: 100px auto;
@@ -157,29 +204,126 @@ main {
 
 #main #recent-posts {
     grid-column: 1 / 3;
-    background-color: deeppink;
     display: flex;
     align-items: center;
 }
 
 #main #posts {
     width: 100%;
-    background-color: darkslategray;
     display: flex;
     flex-direction: column;
 }
 
 #main .post {
     width: 100%;
-    height: 250px;
-    background-color: gold;
+    height: 240px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    column-gap: 15px;
+    grid-template-rows: repeat(12, 20px);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    /* grid-template-areas:
+    "img-post author-categories"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post title-post"
+    "img-post time-release"; */
+}
+
+#main .img-post, #main .author-categories, #main .title-post, #main .time-release {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main .img-post {
+    grid-row: 2 / 12;
+    /* grid-area: img-post; */
+}
+
+#main .author-categories {
+    grid-column: 2 / 2;
+    grid-row: 2 / 4;
+    /* grid-area: author-categories; */
+}
+
+#main .title-post {
+    grid-column: 2 / 2;
+    grid-row: 4 / 10;
+    align-self: flex-start;
+    font-size: 26px;
+    font-weight: 700;
+    /* grid-area: title-post; */
+}
+
+#main .time-release {
+    grid-column: 2 / 2;
+    grid-row: 10 / 12;
+    /* grid-area: time-releasse; */
+}
+
+#main .author-categories img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#main .author-categories a {
+    color: slategrey;
 }
 
 #main #explores {
     width: 100%;
-    height: 100px;
-    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
 }
+
+#main #explores #introduction {
+    width: 100%;
+    background-color: white;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+#main #explores #underline-title-explore {
+    width: 70px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+#main #introduction .avatar {
+    width: 50%;
+}
+
+#main #introduction .wrapper {
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main #introduction .position {
+    display: flex;
+    align-self: center;
+}
+
+#main #introduction .position div {
+    width: 8px;
+    margin-right: 5px;
+}
+
+
 
 
 
@@ -338,6 +482,16 @@ a.dark {
     100% {
         opacity: 0;
         transform: scale(1.3);
+    }
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
     }
 }
 /* End Keyframes Section */
