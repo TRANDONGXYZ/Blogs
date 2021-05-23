@@ -126,9 +126,9 @@ img {
 
 #header nav {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1400px;
     height: 100%;
-    padding: 0px 20px;
+    padding: 0px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,9 +215,9 @@ main {
 
 #main .grid {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1400px;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 0px;
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-rows: 100px auto;
@@ -265,8 +265,8 @@ main {
     width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 500px;
-    column-gap: 20px;
-    row-gap: 30px;
+    column-gap: 10px;
+    row-gap: 20px;
 }
 
 #main .grid .post {
@@ -645,9 +645,9 @@ a.dark {
 
     #main .grid {
         width: 100%;
-        max-width: 1440px;
+        max-width: 1400px;
         height: 100%;
-        padding: 0 20px;
+        padding: 0 0px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 100px auto 100px auto;
