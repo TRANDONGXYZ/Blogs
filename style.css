@@ -9,7 +9,11 @@
 html {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 body {
     background-image: url(./background/background-light.jpg);
     background-size: cover;
@@ -83,9 +87,27 @@ img {
 
 
 
+/* Start Overlay Section */
+#overlay {
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(2rem);
+    background-color: wheat;
+    position: fixed;
+    left: -50px;
+    bottom: -50px;
+    border-radius: 0 50px 0 0;
+    z-index: 1000;
+    transition: 0.5s;
+    transition-property: width, height, border-radius, left, bottom;
+}
+/* End Overlay Section */
+
+
+
 /* Start Header Section */
 #header {
-    width: 100vw;
+    width: 95vw;
     height: 60px;
     /* background-color: antiquewhite; */
 }
@@ -180,7 +202,7 @@ img {
 
 /* Start Posts - Explores Section */
 main {
-    width: 100vw;
+    width: 95vw;
 }
 
 #main .wrapper {
@@ -203,7 +225,31 @@ main {
 }
 
 #main #recent-posts {
-    grid-column: 1 / 3;
+    width: 100%;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main #recent-posts #format {
+    width: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+#main #recent-posts #format div {
+    width: 20px;
+    margin-left: 5px;
+}
+
+#main #recent-posts #format img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#main .grid h3 {
     display: flex;
     align-items: center;
 }
@@ -250,7 +296,19 @@ main {
 
 #main .img-post {
     grid-row: 2 / 12;
+    overflow: hidden;
+    cursor: pointer;
     /* grid-area: img-post; */
+}
+
+#main .img-post img {
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+#main .img-post img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
 #main .author-categories {
@@ -371,7 +429,7 @@ main {
 
 /* Start Footer Section */
 #footer {
-    width: 100vw;
+    width: 95vw;
 }
 
 #footer .footer {
@@ -419,6 +477,29 @@ a.dark {
 
 
 
+/* Start Tools Section */
+#tools {
+    width: 95vw;
+}
+
+#tools #tools-button {
+    width: 100px;
+    height: 100px;
+    background-color: darksalmon;
+    /* border: 3px solid white; */
+    position: fixed;
+    left: -50px;
+    bottom: -50px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+}
+/* End Tools Section */
+
+
+
+
+
 
 
 /* Start Other Media */
@@ -439,7 +520,7 @@ a.dark {
     }
 
     #header #nav-list #nav-links {
-        width: 100vw;
+        width: 95vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -454,7 +535,7 @@ a.dark {
     }
 
     #header.dark #nav-list #nav-links {
-        width: 100vw;
+        width: 95vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -554,14 +635,20 @@ a.dark {
         padding: 0 20px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px auto;
+        grid-template-rows: 100px auto 100px auto;
         column-gap: 20px;
     }
 
-    #main #recent-posts {
-        grid-column: 1 / 1;
-        display: flex;
-        align-items: center;
+    #main .grid .recent-posts {
+        grid-row: 1 / 2;
+    }
+
+    #main .grid h3 {
+        grid-row: 3 / 4;
+    }
+
+    #main #post {
+        grid-row: 2 / 3;
     }
 
     #main .title-post {

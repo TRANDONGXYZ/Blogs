@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="progress-bar"></div>
-    <div id="scroll-path"></div>
+    <!-- <div id="progress-bar"></div>
+    <div id="scroll-path"></div> -->
+
+    <div id="overlay"></div>
 
     <section id="header">
         <header>
@@ -45,7 +47,11 @@
     <main id="main">
         <div class="wrapper">
             <div class="grid">
-                <div id="recent-posts"><h3>Recent posts</h3></div>
+                <div id="recent-posts">
+                    <h3>Recent posts</h3>
+                    <div id="format">Grid<div><img src="./img/grid.png" alt=""></div></div>
+                </div>
+                <h3>Read more</h3>
                 <div id="posts">
                     <div class="post">
                         <div class="img-post"><img src="./old/img/virtual reality.jpg" alt=""></div>
@@ -131,6 +137,14 @@
         <div class="footer"></div>
     </section>
 
+
+    <!-- Start Tools Section -->
+    <section id="tools">
+        <div id="tools-button"></div>
+    </section>
+    <!-- End Tools Section -->
+
     <script src="script.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
 </body>
 </html>
