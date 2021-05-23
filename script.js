@@ -3,6 +3,8 @@ var nav_links = document.getElementById("nav-links");
 var mode = document.getElementById("mode");
 var body = document.getElementsByTagName("body")[0];
 var links = document.getElementsByTagName("a");
+var main = document.getElementById("main");
+var header = document.getElementById("header");
 
 let progress = document.getElementById("progress-bar");
 let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -26,6 +28,8 @@ mode.addEventListener('click', () => {
     }
     mode.classList.toggle("dark");
     body.classList.toggle("dark");
+    header.classList.toggle("dark");
+    main.classList.toggle("dark");
 
     for (var i = 0; i < links.length; i++) {
         links[i].classList.toggle("dark");
