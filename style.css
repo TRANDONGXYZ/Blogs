@@ -291,9 +291,15 @@ main {
 }
 
 #main .grid .post .info-post {
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#main .grid .post .info-post .title-post {
+    height: 130px;
+    overflow: auto;
 }
 
 #main .grid .post .info-post .wrapper {
