@@ -21,23 +21,31 @@ mode.addEventListener('click', () => {
     posts_explores.classList.toggle('dark');
 
     if (mode.getAttribute('class') == 'dark') {
-        $('#mode img').attr('src', './img/sun.svg');
+        let link_img = $('#mode img').attr('src');
+        link_img = link_img.replace('moon', 'sun');
+        $('#mode img').attr('src', link_img);
         $('#mode').attr('title', 'Light mode');
     }
     else {
-        $('#mode img').attr('src', './img/moon.svg');
+        let link_img = $('#mode img').attr('src');
+        link_img = link_img.replace('sun', 'moon');
+        $('#mode img').attr('src', link_img);
         $('#mode').attr('title', 'Dark mode');
     }
 })
 
 format.addEventListener('click', () => {
     if (format.getAttribute('class') == 'grid') {
+        let link_img = $('#format div img').attr('src');
+        link_img = link_img.replace('list', 'grid');
         $('#format p').html('Grid');
-        $('#format div img').attr('src', './img/grid.png');
+        $('#format div img').attr('src', link_img);
     }
     else {
+        let link_img = $('#format div img').attr('src');
+        link_img = link_img.replace('grid', 'list');
         $('#format p').html('List');
-        $('#format div img').attr('src', './img/list.png');
+        $('#format div img').attr('src', link_img);
     }
     format.classList.toggle('grid');
     posts.classList.toggle('grid');
