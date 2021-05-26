@@ -7,113 +7,140 @@
     <title>My Blogs</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;0,800;1,200&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- <div id="progress-bar"></div>
-    <div id="scroll-path"></div> -->
-
-    <div id="overlay"></div>
-
-    <section id="header">
-        <header>
-            <nav>
-                <a href="#" id="logo">
-                    <h2>do<span>Something</span></h2>
-                    <div><img src="./old/img/avatar.png" alt=""></div>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#">
+                    <p>do<span>Something</span></p>
+                    <div><img src="./img/avatar.svg" alt=""></div>
                 </a>
+            </div>
 
-                <div id="nav-list">
-                    <div id="nav-links">
-                        <a href="./categories/Mathematics/Mathematics.html">Mathematics</a>
-                        <a href="./categories/Algorithms/Algorithms.html">Algorithms</a>
-                        <a href="#">Computer Science</a>
-                        <a href="#">Stories</a>
-                        <a href="#">Contact</a>
-                    </div>
+            <div id="nav-links">
+                <a href="./categories/Mathematics/Mathematics.html">Mathematics</a>
+                <a href="./categories/Algorithms/Algorithms.html">Algorithms</a>
+                <a href="#">Computer Science</a>
+                <a href="#">Stories</a>
+                <a href="#">Contact</a>
+            </div>
 
-                    <div id="mode" title="Dark mode"></div>
+            <div id="nav-buttons">
+                <div id="mode" title="Dark mode"><img class="img-contain" src="./img/moon.svg" alt=""></div>
+                <!-- <div id="tools-box" title="Tools"><img src="./img/tools-box-light.svg" alt=""></div> -->
+                <div id="hamburger"><div id="bar"></div></div>
+            </div>
+        </nav>
+    </header>
 
-                    <div id="hamburger">
-                        <div id="bar"></div>
+    <main id="posts-explores">
+        <div id="wrapper">
+            <div id="grid-posts-explores">
+                <div id="recent-posts-format">
+                    <div id="recent-posts"><h3>Recent Posts</h3></div>
+                    <div id="format">
+                        <p>Grid</p>
+                        <div><img class="img-contain" src="./img/grid.png"></div>
                     </div>
                 </div>
-            </nav>
-        </header>
-    </section>
 
-    <main id="main">
-        <div class="wrapper">
-            <div class="grid">
-                <div id="recent-posts">
-                    <h3>Recent posts</h3>
-                    <div id="format">Grid<div><img src="./img/grid.png" alt=""></div></div>
-                </div>
-                <h3 id="read-more">Read more</h3>
+                <div id="read-more"><h3>Read more</h3></div>
+
                 <div id="posts">
                     <div class="post">
-                        <div class="img-post"><img src="./old/img/virtual reality.jpg" alt=""></div>
+                        <div class="img-post"><a href="#"><img src="./img/classic-clock.png"></a></div>
                         <div class="info-post">
-                            <div class="wrapper">
-                                <div class="author-categories">
-                                    <img src="./old/img/avatar.png" alt="">
-                                    <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                                </div>
-                                <div class="title-post"><a href="#">Structured Query Language (SQL) là gì mà chúng lại hiệu quả đến như vậy?</a></div>
+                            <div class="author-categories">
+                                <div><img src="./img/avatar.svg"></div>
+                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
                             </div>
-                            <div class="time-release">01/01/01 - 11:11 AM</div>
+                            <div class="title-post"><a href="#">Tạo máy ảo trên Window trực tiếp không cần cài đặt phần mềm bên thứ 3 với Sandbox có sẵn trên Window 10 Pro</a></div>
+                            <div class="time-release">11/11/2022 - 11:11 AM</div>
                         </div>
                     </div>
 
                     <div class="post">
-                        <div class="img-post"><img src="./old/img/classic-clock.png" alt=""></div>
+                        <div class="img-post"><a href="#"><img src="./img/coding.png"></a></div>
                         <div class="info-post">
-                            <div class="wrapper">
-                                <div class="author-categories">
-                                    <img src="./old/img/avatar.png" alt="">
-                                    <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                                </div>
-                                <div class="title-post"><a href="#">Tạo máy ảo bằng ứng dụng Sandbox trên Window 10 Pro</a></div>
+                            <div class="author-categories">
+                                <div><img src="./img/avatar.svg"></div>
+                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
                             </div>
-                            <div class="time-release">01/01/01 - 11:11 AM</div>
+                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài</a></div>
+                            <div class="time-release">11/11/2022 - 11:11 AM</div>
                         </div>
                     </div>
 
                     <div class="post">
-                        <div class="img-post"><img src="./old/categories/Mathematics/img/dice.jpeg" alt=""></div>
+                        <div class="img-post"><a href="#"><img src="./img/selector.jpg"></a></div>
                         <div class="info-post">
-                            <div class="wrapper">
-                                <div class="author-categories">
-                                    <img src="./old/img/avatar.png" alt="">
-                                    <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Programming Language</a></p>
-                                </div>
-                                <div class="title-post"><a href="#">Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? Chăm chỉ có thật sự sẽ được đền đáp như người ta mong đợi hay không hay đó chỉ là 1 câu khích lệ cho vui mà thôi? </a></div>
+                            <div class="author-categories">
+                                <div><img src="./img/avatar.svg"></div>
+                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
                             </div>
-                            <div class="time-release">01/01/01 - 11:11 AM</div>
+                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài</a></div>
+                            <div class="time-release">11/11/2022 - 11:11 AM</div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="img-post"><a href="#"><img src="./img/virtual reality.jpg"></a></div>
+                        <div class="info-post">
+                            <div class="author-categories">
+                                <div><img src="./img/avatar.svg"></div>
+                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
+                            </div>
+                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài Cách cài Office 365 được tuỳ chỉnh phần grid-template-columns: 4fr 6fr; muốn cài Cách cài Office 365 được tuỳ chỉnh phần muốn cài Cách cài Office 365 được tuỳ chỉnh phần muốn cài Cách cài Office 365 được tuỳ chỉnh phần muốn cài </a></div>
+                            <div class="time-release">11/11/2022 - 11:11 AM</div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="img-post"><a href="#"><img src="./img/memory.gif"></a></div>
+                        <div class="info-post">
+                            <div class="author-categories">
+                                <div><img class="img-contain" src="./img/avatar.svg"></div>
+                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
+                            </div>
+                            <div class="title-post"><a href="#">The last post</a></div>
+                            <div class="time-release">11/11/2022 - 11:11 AM</div>
                         </div>
                     </div>
                 </div>
 
                 <div id="explores">
                     <div class="item-explore">
-                        <div id="introduction">
+                        <div class="introduction">
                             <div class="title-explore"><h3>Introduction</h3></div>
-                            <div class="underline-title-explore"></div>
-                            <div class="avatar"><img src="./old/img/avatar.png" alt=""></div>
-                            <div class="name">Tran Dong</div>
-                            <div class="position">
-                                <div><img src="./old/img/position.svg" alt=""></div>
-                                <p>Ho Chi Minh City</p>
+                            <div class="content-introduction">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="item-explore">
-                        <div id="categories">
-                            <p class="title-explore"><h3>Categories</h3></p>
-                            <div class="underline-title-explore"></div>
+                        <div class="title-explore"><h3>Author</h3></div>
+                        <div class="content-item-explore">
+                            <div class="wrapper">
+                                <div><img src="./img/avatar.svg"></div>
+                                <h4 class="author-name">Tran Dong</h4>
+                                <div class="position">
+                                    <div><img src="./img/position.svg"></div>
+                                    <p>Ho Chi Minh City</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-explore">
+                        <div class="title-explore"><h3>Categories</h3></div>
+                        <div class="content-item-explore">
                             <div class="link-categories">
                                 <a href="./categories/Algorithms/Algorithms.html" class="link-category">Algorithms</a>
                                 <a href="./categories/Mathematics/Mathematics.html" class="link-category">Mathematics</a>
@@ -130,45 +157,8 @@
                     </div>
 
                     <div class="item-explore">
-                        <div id="products"">
-                            <p class="title-explore"><h3>Products</h3></p>
-                            <div class="underline-title-explore"></div>
-                            <div class="link-categories">
-                                <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
-                                <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
-                                <a href="./projects/Countdown Timer/countdown-timer.html" class="link-category">Countdown Timer</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-explore">
-                        <div id="products"">
-                            <p class="title-explore"><h3>Products</h3></p>
-                            <div class="underline-title-explore"></div>
-                            <div class="link-categories">
-                                <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
-                                <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
-                                <a href="./projects/Countdown Timer/countdown-timer.html" class="link-category">Countdown Timer</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-explore">
-                        <div id="products"">
-                            <p class="title-explore"><h3>Products</h3></p>
-                            <div class="underline-title-explore"></div>
-                            <div class="link-categories">
-                                <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
-                                <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
-                                <a href="./projects/Countdown Timer/countdown-timer.html" class="link-category">Countdown Timer</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-explore">
-                        <div id="products"">
-                            <p class="title-explore"><h3>Products</h3></p>
-                            <div class="underline-title-explore"></div>
+                        <div class="title-explore"><h3>Products</h3></div>
+                        <div class="content-item-explore">
                             <div class="link-categories">
                                 <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
                                 <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
@@ -179,20 +169,22 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+        <!-- <div></div> -->
     </main>
 
-    <section id="footer">
-        <div class="footer"></div>
-    </section>
+    <footer>
+        <div id="blank"></div>
+    </footer>
 
-
-    <!-- Start Tools Section -->
-    <section id="tools">
-        <div id="tools-button"></div>
-    </section>
-    <!-- End Tools Section -->
-
-    <script src="script.js"></script>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="./scrips/jquery.js"></script>
+    <script src="./scrips/script.js"></script>
 </body>
 </html>
