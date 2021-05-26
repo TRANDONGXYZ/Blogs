@@ -524,6 +524,10 @@ header.dark nav #nav-links a:hover {
     header nav #logo p {
         display: none;
     }
+
+    #posts-explores #wrapper #grid-posts-explores {
+        grid-template-columns: 6.5fr 4.5fr;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -592,9 +596,39 @@ header.dark nav #nav-links a:hover {
 
     header nav #nav-buttons #hamburger #bar {
         width: 30px;
-        height: 3px;
+        height: 2px;
+        border-radius: 3px;
         background-color: darksalmon;
+        position: relative;
     }
+
+    header #hamburger #bar::before, header #hamburger #bar::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: darksalmon;
+        border-radius: 3px;
+        position: absolute;
+    }
+
+    header #hamburger #bar::before {
+        bottom: 8px;
+        transition: 0.5s bottom;
+    }
+
+    header #hamburger #bar::after {
+        top: 8px;
+        transition: 0.5s top;
+    }
+
+    header #hamburger.open #bar::before{
+        bottom: 0px;
+    }
+
+    header #hamburger.open #bar::after {
+        top: 0px;
+    }
+
 
 
 
