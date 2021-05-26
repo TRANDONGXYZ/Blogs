@@ -225,6 +225,7 @@ header nav #nav-buttons #tools-box {
 
 #posts-explores #wrapper #grid-posts-explores #posts {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
 }
@@ -455,7 +456,7 @@ footer {
 
 footer #blank {
     width: 100%;
-    height: 400px;
+    height: 200px;
 }
 /* End Footer Section */
 
