@@ -467,6 +467,7 @@ footer #blank {
 
 /* Start Dark Mode Section */
 body.dark {
+    background-color: rgb(38, 37, 38);
     background-image: url(../background/background-dark.png);
 }
 
@@ -526,8 +527,31 @@ header.dark nav #nav-links a:hover {
         display: none;
     }
 
-    #posts-explores #wrapper #grid-posts-explores {
+    /* #posts-explores #wrapper #grid-posts-explores {
         grid-template-columns: 6.5fr 4.5fr;
+    } */
+
+    #posts-explores #wrapper #grid-posts-explores #posts.grid {
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #posts-explores #wrapper #grid-posts-explores {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto 120px auto;
+        column-gap: 20px;
+    }
+
+    #posts-explores #wrapper #grid-posts-explores #read-more {
+        grid-row: 3 / 4;
+        margin-top: 40px;
+    }
+
+    #posts-explores #wrapper #grid-posts-explores #posts.grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -634,18 +658,6 @@ header.dark nav #nav-links a:hover {
 
 
 
-    #posts-explores #wrapper #grid-posts-explores {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 80px auto 120px auto;
-        column-gap: 20px;
-    }
-
-    #posts-explores #wrapper #grid-posts-explores #read-more {
-        grid-row: 3 / 4;
-        margin-top: 40px;
-    }
 
     #posts-explores #wrapper #grid-posts-explores #posts .post .info-post .title-post {
         font-size: 18px;
