@@ -57,6 +57,18 @@ html::-webkit-scrollbar-thumb {
     background-color: brown;
 }
 
+.snap-products::-webkit-scrollbar {
+    display: none;
+}
+
+.snap-products::-webkit-scrollbar {
+    width: 2px;
+}
+
+.snap-products::-webkit-scrollbar-thumb {
+    background-color: teal;
+}
+
 /* iframe {
     width: 100%;
     height: 100%;
@@ -168,13 +180,94 @@ header nav #nav-buttons #tools-box {
 
 
 /* Start Main Section */
+#products {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#products .wrapper {
+    width: 100%;
+    max-width: 1420px;
+    padding: 0px 10px;
+    /* background-color: darkcyan; */
+}
+
+#products .wrapper .snap-products {
+    display: flex;
+    overflow-x: auto;
+    background-color: white;
+    border: 20px solid white;
+}
+
+#products .wrapper .title {
+    margin-bottom: 20px;
+}
+
+#products .wrapper .snap-products .item-product {
+    min-width: 65%;
+    height: 300px;
+    background-clip: content-box;
+    padding: 0px 10px;
+    background-color: wheat;
+}
+
+#products .wrapper .snap-products .item-product:first-child {
+    padding-left: 0;
+}
+
+#products .wrapper .snap-products .item-product:last-child {
+    padding-right: 0;
+}
+
+#products .wrapper .snap-products .item-product .img-product {
+    width: 100%;
+    height: 200px;
+}
+
+#products .wrapper .snap-products .item-product .info-project {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#products .wrapper .snap-products .item-product .info-project .title-project {
+    flex-grow: 1;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+#products .wrapper .snap-products .item-product .info-project .title-project a {
+    color: black;
+}
+
+#products .wrapper .snap-products .item-product .info-project .author-categories {
+    display: flex;
+}
+
+#products .wrapper .snap-products .item-product .info-project .author-categories div {
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
 #posts-explores {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     transition: 0.3s color;
 }
 
@@ -503,6 +596,7 @@ header nav #nav-buttons #tools-box {
     height: 3.5px;
     background-color: blue;
     position: absolute;
+    transition: 0.3s background-color;
 }
 
 #post-content .wrapper #grid-post-table-of-content #main-post .content .para {
@@ -675,6 +769,10 @@ header.dark nav #nav-links a:hover {
 
 #post-content.dark {
     color: white;
+}
+
+#post-content.dark .wrapper #grid-post-table-of-content #main-post .content .header::after {
+    background-color: darkcyan;
 }
 
 #post-content.dark #table-of-content .title-explore {
