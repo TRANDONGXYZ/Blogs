@@ -104,3 +104,10 @@ if (prefix != null) {
 
 
 
+let links_anchor = document.getElementsByClassName('link-anchor');
+for (let i = 0; i < links_anchor.length; i++)
+    links_anchor[i].addEventListener('click', () => {
+        for (let j = 0; j < links_anchor.length; j++)
+            links_anchor[j].classList.remove('active');
+        links_anchor[i].classList.add('active');
+    })
