@@ -175,6 +175,11 @@ header nav #nav-buttons #tools-box {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    transition: 0.3s color;
+}
+
+#posts-explores a {
+    transition: 0.3s color;
 }
 
 #posts-explores .wrapper {
@@ -200,18 +205,10 @@ header nav #nav-buttons #tools-box {
     align-items: center;
 }
 
-#posts-explores .wrapper #grid-posts-explores #recent-posts {
-    transition: 0.3s color;
-}
-
 #posts-explores .wrapper #grid-posts-explores #recent-posts-format #format {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-#posts-explores .wrapper #grid-posts-explores #recent-posts-format #format p {
-    transition: 0.3s color;
 }
 
 #posts-explores .wrapper #grid-posts-explores #recent-posts-format #format div {
@@ -230,10 +227,6 @@ header nav #nav-buttons #tools-box {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-#posts-explores .wrapper #grid-posts-explores #read-more h3 {
-    transition: 0.3s color;
 }
 
 #posts-explores .wrapper #grid-posts-explores #posts {
@@ -289,11 +282,9 @@ header nav #nav-buttons #tools-box {
     display: flex;
     /* align-items: center; */
     margin-bottom: 5px;
-    transition: 0.3s color;
 }
 
 #posts-explores .wrapper #grid-posts-explores #posts .post .info-post .author-categories a {
-    transition: 0.3s color;
     color: teal;
 }
 
@@ -317,7 +308,6 @@ header nav #nav-buttons #tools-box {
 }
 
 #posts-explores .wrapper #grid-posts-explores #posts .post .info-post .title-post a {
-    transition: 0.3s color;
     color: black;
 }
 
@@ -340,12 +330,10 @@ header nav #nav-buttons #tools-box {
 .title-explore {
     position: relative;
     margin-bottom: 15px;
-    transition: 0.3s color;
 }
 
 #explores .item-explore .content-introduction p {
     margin-bottom: 10px;
-    transition: 0.3s color;
 }
 
 #explores .item-explore .content-introduction p:last-child {
@@ -385,7 +373,6 @@ header nav #nav-buttons #tools-box {
 #explores .item-explore .content-item-explore .wrapper .position {
     display: flex;
     width: fit-content;
-    transition: 0.3s color;
 }
 
 #explores .item-explore .content-item-explore .wrapper .position div {
@@ -462,6 +449,7 @@ header nav #nav-buttons #tools-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s color;
 }
 
 #post-content .wrapper {
@@ -562,6 +550,10 @@ header nav #nav-buttons #tools-box {
     height: fit-content;
 }
 
+#table-of-contents a {
+    transition: 0.3s color;
+}
+
 #table-of-contents .wrapper {
     width: 100%;
     padding: 10px;
@@ -578,7 +570,7 @@ header nav #nav-buttons #tools-box {
     column-gap: 10px;
 }
 
-#table-of-contents .wrapper .contents .link-anchor:hover .bar {
+#post-content #table-of-contents .wrapper .contents .link-anchor:hover .bar {
     background-color: thistle;
 }
 
@@ -590,7 +582,7 @@ header nav #nav-buttons #tools-box {
     transition: 0.2s;
 }
 
-#table-of-contents .wrapper .contents .bar::after {
+#post-content #table-of-contents .wrapper .contents .bar::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -601,7 +593,7 @@ header nav #nav-buttons #tools-box {
     transition: 0.2s;
 }
 
-#table-of-contents .wrapper .contents .link-anchor.active .bar::after {
+#post-content #table-of-contents .wrapper .contents .link-anchor.active .bar::after {
     top: 0;
 }
 
@@ -679,6 +671,30 @@ header.dark nav #nav-links a:hover {
 
 #posts-explores.dark #explores .item-explore {
     background-color: rgb(38, 37, 38);
+}
+
+#post-content.dark {
+    color: white;
+}
+
+#post-content.dark #table-of-content .title-explore {
+    color: white;
+}
+
+#post-content.dark .wrapper #grid-post-table-of-content #main-post, #post-content.dark .wrapper #grid-post-table-of-content #table-of-contents {
+    background-color: rgb(38, 37, 38);
+}
+
+#post-content.dark .wrapper #grid-post-table-of-content #table-of-contents a {
+    color: white;
+}
+
+#post-content.dark #table-of-contents .wrapper .contents .bar::after {
+    background-color: thistle;
+}
+
+#post-content.dark #table-of-contents .wrapper .contents .link-anchor:hover .bar {
+    background-color: teal;
 }
 /* End Dark Mode Section */
 

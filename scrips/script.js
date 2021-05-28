@@ -6,6 +6,7 @@ let header = document.getElementsByTagName('header')[0];
 let posts_explores = document.getElementById('posts-explores');
 let format = document.getElementById('format');
 let posts = document.getElementById('posts');
+let post_content = document.getElementById('post-content');
 
 let old_y = window.scrollY, new_y = window.scrollY, pos_scroll = 0;
 
@@ -20,6 +21,9 @@ mode.addEventListener('click', () => {
     header.classList.toggle('dark');
     if (posts_explores)
         posts_explores.classList.toggle('dark');
+
+    if (post_content)
+        post_content.classList.toggle('dark');
 
     if (mode.getAttribute('class') == 'dark') {
         let link_img = $('#mode img').attr('src');
@@ -111,3 +115,6 @@ for (let i = 0; i < links_anchor.length; i++)
             links_anchor[j].classList.remove('active');
         links_anchor[i].classList.add('active');
     })
+
+
+
