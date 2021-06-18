@@ -1,215 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blogs</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap" rel="stylesheet">
-
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="./css/style.css" id="css-file">
+    <title>Game Puzzle</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div id="logo">
-                <a href="" address-file="index.html">
-                    <p>do<span>Something</span></p>
-                    <div><img src="" address-file="img/avatar.svg"></div>
-                </a>
-            </div>
+    <!-- Navbar section-->
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid section-center">
+            <a href="#" class="navbar-brand">
+                <img src="./img/game-controller-light.svg" id="logo-img">
+                Game Puzzle
+            </a>
 
-            <div id="nav-links">
-                <a href="" address-file="categories/Mathematics/Mathematics.html">Mathematics</a>
-                <a href=""  address-file="categories/Algorithms/Algorithms.html">Algorithms</a>
-                <a href="#">Computer Science</a>
-                <a href="#">Stories</a>
-                <a href="#">Contact</a>
-            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div id="nav-buttons">
-                <div id="mode" title="Dark mode"><img class="img-contain" src="" address-file="img/moon.svg"></div>
-                <!-- <div id="tools-box" title="Tools"><img src="./img/tools-box-light.svg" alt=""></div> -->
-                <div id="hamburger"><div id="bar"></div></div>
-            </div>
-        </nav>
-    </header>
+            <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+                <ul class="navbar-nav align-items-md-center">
+                    <li class="nav-item">
+                        <a href="#instructors" class="nav-link">Introduction</a>
+                    </li>
 
-    <main id="posts-explores">
-        <div class="wrapper">
-            <h3 class="title">Products</h3>
-            <div class="snap-products">
-                <div class="item-product"></div>
-                <div class="item-product"></div>
-                <div class="item-product"></div>
-                <div class="item-product"></div>
-                <div class="item-product"></div>
-                <div class="item-product"></div>
-            </div>
+                    <li class="nav-item">
+                        <a href="#learn" class="nav-link">Guide</a>
+                    </li>
 
-            <div id="grid-posts-explores">
-                <div id="recent-posts-format">
-                    <div id="recent-posts"><h3>Recent Posts</h3></div>
-                    <div id="format">
-                        <p>Grid</p>
-                        <div><img class="img-contain" src="" address-file="img/grid.svg"></div>
-                    </div>
+                    <li class="nav-item">
+                        <a href="#questions" class="nav-link">Source Code</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#instructors" class="nav-link">My Team</a>
+                    </li>
+
+                    <li class="nav-item ms-md-4">
+                        <button class="btn btn-outline-dark" title="Dark mode" id="mode"><img
+                                src="./img/dark-mode.svg"></button>
+                        <!-- <img src="./img/dark-mode.svg" alt=""></li> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main section -->
+    <section id="main-section">
+        <div class="container-fluid section-center">
+
+            <div class="row">
+                <!-- Custome -->
+                <div class="col-xl-3" id="custome">
+                    <h2 class="text-center my-3">Adjust</h2>
+
+                    <form class="row g-3">
+                        <div class="col-xl-12 col-md-6">
+                            <label for="input-size-rows" class="form-label">Rows x Columns</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control text-center input-size" id="input-size-rows"
+                                    placeholder="<= 10" value="3" required>
+                                <input type="text" class="form-control text-center input-size" id="input-size-columns"
+                                    placeholder="<= 10" value="3" required>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-6">
+                            <label for="inputState" class="form-label">Algorithm</label>
+                            <select id="inputState" class="form-select">
+                                <option selected disabled>Choose...</option>
+                                <option>BFS</option>
+                                <option>DFS</option>
+                                <option>UCS</option>
+                                <option>A*</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12 col-md-6">
+                            <label for="inputAddress2" class="form-label">Input State</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Input State"
+                                    aria-label="Recipient's username with two button addons">
+                                <button class="btn btn-secondary table-input-state" type="button">Table</button>
+                                <button class="btn btn-info randomButton" type="button">Random</button>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-md-6">
+                            <label for="inputAddress2" class="form-label">Goal State</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Goal State"
+                                    aria-label="Recipient's username with two button addons">
+                                <button class="btn btn-secondary" type="button">Table</button>
+                                <button class="btn btn-info randomButton" type="button">Random</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputCity" class="form-label">Time limit</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" value="60000"
+                                    aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text">ms</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputCity" class="form-label">Deepth limit</label>
+                            <input type="text" class="form-control" value="1000" id="inputCity">
+                        </div>
+                        <div class="col-xl-12 col-md-9">
+                            <button class="btn btn-primary" type="button">Choose Background Image</button>
+                            <div class="form-check ms-xl-0 ms-sm-4" style="display: inline-block;">
+                                <input class="form-check-input" type="checkbox" id="inlineFormCheck" checked>
+                                <label class="form-check-label" for="inlineFormCheck">
+                                    Show background
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn-group col-md-12" role="group" aria-label="Basic mixed styles example">
+                            <button type="button" class="btn btn-success">Start</button>
+                            <button type="button" class="btn btn-danger">Stop</button>
+                            <button type="button" class="btn btn-warning">Reset</button>
+                        </div>
+                    </form>
                 </div>
 
-                <div id="read-more"><h3>Read more</h3></div>
 
-                <div id="posts">
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/using-computer.png"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img src="" address-file="img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="" class="name-topic" address-file="categories/Tips/Tips.html">Tips</a></p>
-                            </div>
-                            <div class="title-post"><a href="./categories/Tips/Sử dụng máy tính nhanh và dễ dàng hơn/Sử dụng máy tinh nhanh và dễ dàng hơn.html">Sử dụng máy tính nhanh và dễ dàng hơn</a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
+                <!-- Boards game -->
+                <div class="col-xl-9">
+                    <div class="row">
+                        <div class="col-xl-6 d-flex justify-content-center align-items-center">
+                            <div class="board board-play my-3"></div>
+                            <!-- <h2>Current State</h2> -->
+                        </div>
+
+                        <div class="col-xl-6 d-flex justify-content-center align-items-center">
+                            <div class="board board-goal my-3"></div>
+                            <!-- <h3>Goal State</h3> -->
                         </div>
                     </div>
 
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/coding.png"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img src="./img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                            </div>
-                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài</a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/selector.jpg"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img src="./img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                            </div>
-                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài</a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/virtual reality.jpg"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img src="./img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                            </div>
-                            <div class="title-post"><a href="#">Cách cài Office 365 được tuỳ chỉnh phần muốn cài </a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/memory.gif"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img class="img-contain" src="./img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                            </div>
-                            <div class="title-post"><a href="#">The last post</a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class="img-post"><a href="#"><img src="./img/internet.png"></a></div>
-                        <div class="info-post">
-                            <div class="author-categories">
-                                <div><img class="img-contain" src="./img/avatar.svg"></div>
-                                <p><a href="#" class="author">Tran Dong</a> trong <a href="#" class="name-topic">Projects</a></p>
-                            </div>
-                            <div class="title-post"><a href="#">The last post</a></div>
-                            <div class="time-release">11/11/2022 - 11:11 AM</div>
+                    <div class="row">
+                        <div class="container">
+                            Statistic
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div id="explores">
-                    <div class="item-explore">
-                        <div class="introduction">
-                            <div class="title-explore"><h3>Introduction</h3></div>
-                            <div class="content-introduction">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita animi ullam nemo autem dicta ea quod earum, deleniti laboriosam. Dolor corrupti reprehenderit reiciendis nam sint, ipsa quis similique quas necessitatibus?</p>
-                            </div>
-                        </div>
+
+        </div>
+    </section>
+
+    <!-- Modal section -->
+    <div class="modal fade bg-transparent-blur" id="modal-background-image" data-bs-backdrop="static"
+        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content bg-transparent-blur">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row g-3" id="background-image-gallery"></div>
                     </div>
-
-                    <div class="item-explore">
-                        <div class="title-explore"><h3>Author</h3></div>
-                        <div class="content-item-explore">
-                            <div class="wrapper">
-                                <div><img src="./img/avatar.svg"></div>
-                                <h4 class="author-name">Tran Dong</h4>
-                                <div class="position">
-                                    <div><img src="./img/position.svg"></div>
-                                    <p>Ho Chi Minh City</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-explore">
-                        <div class="title-explore"><h3>Categories</h3></div>
-                        <div class="content-item-explore">
-                            <div class="link-categories">
-                                <a href="./categories/Algorithms/Algorithms.html" class="link-category">Algorithms</a>
-                                <a href="./categories/Mathematics/Mathematics.html" class="link-category">Mathematics</a>
-                                <a href="./categories/Computer Network/Computer Network.html" class="link-category">Computer Network</a>
-                                <a href="" class="link-category">Computer Security</a>
-                                <a href="./categories/Computer Architecture/Computer Architecture.html" class="link-category">Computer Architecture</a>
-                                <a href="./categories/Programming Language/Programming Language.html" class="link-category">Programming Language</a>
-                                <a href="./categories/Technology/Technology.html" class="link-category">Technology</a>
-                                <a href="" class="link-category">Games</a>
-                                <a href="./categories/Tips/Tips.html" class="link-category">Tips</a>
-                                <a href="" class="link-category">Stories</a>
-                                <a href="./projects/projects.html" class="link-category">Projects</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="item-explore">
-                        <div class="title-explore"><h3>Products</h3></div>
-                        <div class="content-item-explore">
-                            <div class="link-categories">
-                                <a href="./projects/digital-clock/digital-clock.html" class="link-category">Digital Clock</a>
-                                <a href="./projects/classic-clock/classic-clock.html" class="link-category">Classic Clock</a>
-                                <a href="./projects/Countdown Timer/countdown-timer.html" class="link-category">Countdown Timer</a>
-                            </div>
-                        </div>
-                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
+    </div>
 
 
+    <!-- Input State -->
+    <div class="wrapper-input-state">
+        <div class="input-state">
+            <div class="input-state-header">
+                <h5>Set Input State</h5>
+                <img src="./img/close-button.svg" class="close-button">
+            </div>
 
+            <div class="input-state-body">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+                <input class="form-control form-control-sm" type="text" placeholder="12" aria-label=".form-control-sm example" style="background-color: transparent;">
+            </div>
 
+            <div class="input-state-footer d-flex justify-content-end">
+                <button class="btn btn-outline-secondary ok-table-input">OK</button>
+            </div>
+        </div>
+    </div>
 
-
-
-
-        <!-- <div></div> -->
-    </main>
-
-    <footer>
-        <div id="blank"></div>
-    </footer>
-
-    <script src="./scrips/jquery.js"></script>
-    <script src="./scrips/script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <!-- <script type="module" src="js/board-game.js"></script>
+    <script type="module" src="js/events.js"></script> -->
+    <script type="module" src="js/app.js"></script>
 </body>
+
 </html>
