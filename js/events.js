@@ -227,6 +227,8 @@ function updateSizeBoardGameEvent() {
     updateBoardGoal();
     updateTableInputState();
     showMessageError("");
+    const okButton = document.querySelector('.ok-table-input');
+    okButton.classList.add('disabled');
 }
 
 function keyboardEvent(event) {
