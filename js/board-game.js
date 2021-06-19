@@ -13,15 +13,23 @@ class Board {
         return {rows_size: this.rows_size, columns_size: this.columns_size};
     }
 
-    getValueAtCell(row = 0, col = 0) {
+    getCurrentValueAtCell(row = 0, col = 0) {
         return this.current_state[row][col];
     }
 
-    setValueAtCell(row = 0, col = 0, value = 0) {
+    setCurrentValueAtCell(row = 0, col = 0, value = 0) {
         this.current_state[row][col] = value;
     }
 
-    createInitState() {
+    getGoalValueAtCell(row = 0, col = 0) {
+        return this.goal_state[row][col];
+    }
+
+    setGoalValueAtCell(row = 0, col = 0, value = 0) {
+        this.goal_state[row][col] = value;
+    }
+
+    createDefaultGoalState() {
         let initArray = [];
         for (let i = 0; i < this.rows_size; i++) {
             for (let j = 0; j < this.columns_size; j++) {
@@ -38,7 +46,7 @@ class Board {
             }
         }
 
-        this.current_state = initState;
+        this.goal_state = initState;
     }
 
     createRandomState() {
@@ -88,13 +96,12 @@ function getSizeBoardFromInput() {
 
 
 export let board_game = new Board();
-export let board_goal = new Board();
 
 export function updateSizeBoardGame() {
     let size_board_game_input = getSizeBoardFromInput();
     board_game = new Board(size_board_game_input.rows_size, size_board_game_input.columns_size);
-    board_goal = new Board(size_board_game_input.rows_size, size_board_game_input.columns_size);
     board_game.createRandomState();
+    board_game.createDefaultGoalState();
 }
 
 updateSizeBoardGame();
