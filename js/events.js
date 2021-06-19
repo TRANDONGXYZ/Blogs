@@ -12,18 +12,24 @@ const inputs_size = document.querySelectorAll('.input-size');
 inputs_size.forEach(input_size => input_size.addEventListener('change', updateSizeBoardGameEvent));
 const table_input_state = document.querySelector('.table-input-state');
 table_input_state.addEventListener('click', () => {
-    const wrapperTableInput = document.querySelector('.wrapper-input-state');
+    const wrapperTableInput = document.querySelector('.wrapper-table-input');
+    const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
+    blur.classList.toggle('open');
 });
 const closeButton = document.querySelector('.close-button');
 closeButton.addEventListener('click', () => {
-    const wrapperTableInput = document.querySelector('.wrapper-input-state');
+    const wrapperTableInput = document.querySelector('.wrapper-table-input');
+    const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
+    blur.classList.toggle('open');
 });
 const okButton = document.querySelector('.ok-table-input');
 okButton.addEventListener('click', () => {
-    const wrapperTableInput = document.querySelector('.wrapper-input-state');
+    const wrapperTableInput = document.querySelector('.wrapper-table-input');
+    const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
+    blur.classList.toggle('open');
     updateBoardGameFromTableInput();
 });
 

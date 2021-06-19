@@ -99,34 +99,48 @@ html::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
-.wrapper-input-state {
+.wrapper-table-input {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     left: 0;
     top: -100%;
-    z-index: 1000000;
-    background-color: transparent;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    transition: 0.4s;
+    z-index: 1000000;
     padding: 10px;
-    transition: 0.5s;
-    transition-property: transform, top;
 }
 
-.wrapper-input-state.open {
+.wrapper-table-input.open {
     top: 0;
 }
 
 .input-state {
-    /* width: 400px;
-    height: 400px; */
     max-width: 700px;
     padding: 10px;
+    
     background-color: transparent;
-    backdrop-filter: blur(5rem);
+    backdrop-filter: blur(50px);
     border-radius: 10px;
+    z-index: 1000000;
+    transition: 0.4s;
+    transform: translateY(-100vh) scale(0);
+}
+
+.input-state.open {
+    transform: translateY(0) scale(1);
+}
+
+@keyframes name {
+    90% {
+        transform: rotateX(-10deg);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
 }
 
 .input-state-header {
