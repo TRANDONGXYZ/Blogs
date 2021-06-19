@@ -122,6 +122,7 @@ html::-webkit-scrollbar-thumb {
 .input-state {
     /* width: 400px;
     height: 400px; */
+    max-width: 700px;
     padding: 10px;
     background-color: transparent;
     backdrop-filter: blur(5rem);
@@ -141,9 +142,14 @@ html::-webkit-scrollbar-thumb {
 .input-state-body {
     margin: 20px 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr); */
     grid-gap: 10px;
+}
+
+.cell-input {
+    border-color: white;
+    opacity: 0.7;
 }
 
 @media screen and (max-width: 768px) {

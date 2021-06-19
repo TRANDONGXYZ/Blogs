@@ -23,7 +23,7 @@ const okButton = document.querySelector('.ok-table-input');
 okButton.addEventListener('click', () => {
     const wrapperTableInput = document.querySelector('.wrapper-input-state');
     wrapperTableInput.classList.toggle('open');
-})
+});
 
 
 let size_board_game;
@@ -42,8 +42,9 @@ export function init() {
             newCell.setAttribute('column', j);
             newCell.addEventListener('click', cellClick);
 
-            if (!isBlankCell(board_game.current_state[i][j])) {
-                newCell.innerHTML = board_game.current_state[i][j];
+            if (!isBlankCell(board_game.getValueAtCell(i, j))) {
+                // console.log(board_game.getValueAtCell(i, j));
+                newCell.innerHTML = board_game.getValueAtCell(i, j);
             }
             else {
                 newCell.innerHTML = "";
@@ -56,6 +57,29 @@ export function init() {
 
     if (start) {
         updateBoardGoal();
+
+        const input_state_body = document.querySelector('.input-state-body');
+        input_state_body.setAttribute('style', 'grid-template-columns: repeat(' + size_board_game.columns_size + ', 1fr);');
+
+        for (let i = 0; i < size_board_game.rows_size; i++) {
+            for (let j = 0; j < size_board_game.columns_size; j++) {
+                const newCellInput = document.createElement('input');
+                newCellInput.classList.add('form-control');
+                newCellInput.classList.add('form-control-sm');
+                newCellInput.classList.add('text-center');
+                newCellInput.classList.add('cell-input');
+
+                newCellInput.setAttribute('type', 'text');
+                newCellInput.setAttribute('aria-label', '.form-control-sm example');
+                newCellInput.setAttribute('style', 'background-color: transparent');
+
+                newCellInput.setAttribute('row', i);
+                newCellInput.setAttribute('column', j);
+                newCellInput.addEventListener('change', updateBoardGameFromTableInput);
+                input_state_body.appendChild(newCellInput);
+            }
+        }
+
         start = false;
     }
 }
@@ -73,8 +97,9 @@ function updateBoardGoal() {
             newCell.setAttribute('row', i);
             newCell.setAttribute('column', j);
 
-            if (board_goal.current_state[i][j]) {
-                newCell.innerHTML = board_goal.current_state[i][j];
+            if (!isBlankCell(board_game.getValueAtCell(i, j))) {
+                // console.log(board_game.getValueAtCell(i, j));
+                newCell.innerHTML = board_game.getValueAtCell(i, j);
             }
             else {
                 newCell.innerHTML = "";
@@ -92,6 +117,17 @@ function removeAllChildren(node) {
     }
 }
 
+function updateBoardGameFromTableInput() {
+    const input_state = document.querySelectorAll('.cell-input');
+    input_state.forEach(cell => {
+        // console.log(cell.value);
+        let row = parseInt(cell.getAttribute('row')), col = parseInt(cell.getAttribute('column'));
+        console.log(row, col);
+        board_game.setValueAtCell(row, col, parseInt(cell.value));
+    })
+    updateBoardGame();
+}
+
 function updateBoardGame() {
     const board_game_play = document.querySelector('.board-play');
     removeAllChildren(board_game_play);
@@ -99,11 +135,11 @@ function updateBoardGame() {
 }
 
 function isBlankCell(value) {
-    return value == BLANK_CELL;
+    return value === BLANK_CELL;
 }
 
 function isFail(value) {
-    return value == FAIL;
+    return value === FAIL;
 }
 
 function moveCell(row, col, direct) {
