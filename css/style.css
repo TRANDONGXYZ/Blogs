@@ -28,7 +28,7 @@ html::-webkit-scrollbar-thumb {
 
 .board {
     width: 600px;
-    height: 600px;
+    /* height: 600px; */
     display: grid;
     /* grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); */
@@ -46,7 +46,7 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .blank {
@@ -141,4 +141,16 @@ html::-webkit-scrollbar-thumb {
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .cell, .cell-goal {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cell, .cell-goal {
+        font-size: 1rem;
+    }
 }
