@@ -6,31 +6,59 @@ import * as CONST from "./const.js";
 document.addEventListener("keydown", keyboardEvent);
 
 
-const randomButtons = document.querySelectorAll('.randomButton');
-randomButtons.forEach(randomButton => randomButton.addEventListener('click', createRandomStateEvent));
+const randomButtonInput = document.querySelectorAll('.randomButtonInput');
+randomButtonInput.forEach(randomButton => randomButton.addEventListener('click', createRandomStateInputEvent));
+const randomButtonGoal = document.querySelectorAll('.randomButtonGoal');
+randomButtonGoal.forEach(randomButton => randomButton.addEventListener('click', createRandomStateGoalEvent));
 const inputs_size = document.querySelectorAll('.input-size');
 inputs_size.forEach(input_size => input_size.addEventListener('change', updateSizeBoardGameEvent));
-const table_input_state = document.querySelector('.table-input-state');
+
+
+const table_input_state = document.querySelector('.table-input-state-button');
 table_input_state.addEventListener('click', () => {
     const wrapperTableInput = document.querySelector('.wrapper-table-input');
     const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
     blur.classList.toggle('open');
 });
-const closeButton = document.querySelector('.close-button');
-closeButton.addEventListener('click', () => {
+const closeButtonTableInput = document.querySelector('.close-button-input');
+closeButtonTableInput.addEventListener('click', () => {
     const wrapperTableInput = document.querySelector('.wrapper-table-input');
     const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
     blur.classList.toggle('open');
 });
-const okButton = document.querySelector('.ok-table-input');
-okButton.addEventListener('click', () => {
+const okButtonTableInput = document.querySelector('.ok-table-input');
+okButtonTableInput.addEventListener('click', () => {
     const wrapperTableInput = document.querySelector('.wrapper-table-input');
     const blur = document.querySelector('.input-state');
     wrapperTableInput.classList.toggle('open');
     blur.classList.toggle('open');
     updateBoardGameFromTableInput();
+});
+
+
+const table_goal_state = document.querySelector('.table-goal-state-button');
+table_goal_state.addEventListener('click', () => {
+    const wrapperTablegoal = document.querySelector('.wrapper-table-goal');
+    const blur = document.querySelector('.goal-state');
+    wrapperTablegoal.classList.toggle('open');
+    blur.classList.toggle('open');
+});
+const closeButtonTableGoal = document.querySelector('.close-button-goal');
+closeButtonTableGoal.addEventListener('click', () => {
+    const wrapperTableGoal = document.querySelector('.wrapper-table-goal');
+    const blur = document.querySelector('.goal-state');
+    wrapperTableGoal.classList.toggle('open');
+    blur.classList.toggle('open');
+});
+const okButtonTableGoal = document.querySelector('.ok-table-goal');
+okButtonTableGoal.addEventListener('click', () => {
+    const wrapperTableGoal = document.querySelector('.wrapper-table-goal');
+    const blur = document.querySelector('.goal-state');
+    wrapperTableGoal.classList.toggle('open');
+    blur.classList.toggle('open');
+    updateBoardGameFromTableGoal();
 });
 
 
@@ -40,6 +68,7 @@ export function init() {
     updateBoardGame();
     updateBoardGoal();
     updateTableInputState();
+    updateTableGoalState();
 }
 
 function updateBoardGame() {
@@ -121,6 +150,32 @@ function updateTableInputState() {
     }
 }
 
+function updateTableGoalState() {
+    size_board_game = board_game.getSizeBoard();
+    const goal_state_body = document.querySelector('.goal-state-body');
+    removeAllChildren(goal_state_body);
+    goal_state_body.setAttribute('style', 'grid-template-columns: repeat(' + size_board_game.columns_size + ', 1fr);');
+
+    for (let i = 0; i < size_board_game.rows_size; i++) {
+        for (let j = 0; j < size_board_game.columns_size; j++) {
+            const newCellInput = document.createElement('input');
+            newCellInput.classList.add('form-control');
+            newCellInput.classList.add('form-control-sm');
+            newCellInput.classList.add('text-center');
+            newCellInput.classList.add('cell-input-goal');
+
+            newCellInput.setAttribute('type', 'text');
+            newCellInput.setAttribute('aria-label', '.form-control-sm example');
+            newCellInput.setAttribute('style', 'background-color: transparent');
+
+            newCellInput.setAttribute('row', i);
+            newCellInput.setAttribute('column', j);
+            newCellInput.addEventListener('change', checkValidationTableGoal);
+            goal_state_body.appendChild(newCellInput);
+        }
+    }
+}
+
 function updateBoardGameFromTableInput() {
     const input_state = document.querySelectorAll('.cell-input');
     input_state.forEach(cell => {
@@ -130,8 +185,17 @@ function updateBoardGameFromTableInput() {
     updateBoardGame();
 }
 
-function showMessageError(error_name) {
-    const input_error_alert = document.querySelector('.input-error-alert');
+function updateBoardGameFromTableGoal() {
+    const goal_state = document.querySelectorAll('.cell-input-goal');
+    goal_state.forEach(cell => {
+        let row = parseInt(cell.getAttribute('row')), col = parseInt(cell.getAttribute('column'));
+        board_game.setGoalValueAtCell(row, col, parseInt(cell.value));
+    })
+    updateBoardGoal();
+}
+
+function showMessageError(error_name, table) {
+    const input_error_alert = document.querySelector('.' + table + '-error-alert');
     input_error_alert.innerHTML = error_name;
 }
 
@@ -146,6 +210,7 @@ function isContinousArray(array) {
 
 function checkValidationTableInput() {
     const cellsInput = document.querySelectorAll('.cell-input');
+    console.log(cellsInput);
     let input_state = [];
     cellsInput.forEach(cell => input_state.push(cell.value));
 
@@ -169,9 +234,47 @@ function checkValidationTableInput() {
         }
     }
 
-    showMessageError(error_name);
+    showMessageError(error_name, "input");
 
     const okButton = document.querySelector('.ok-table-input');
+    if (error_name === "") {
+        okButton.classList.remove('disabled');
+    }
+    else {
+        okButton.classList.add('disabled');
+    }
+}
+
+function checkValidationTableGoal() {
+    const cellsGoal = document.querySelectorAll('.cell-input-goal');
+    console.log(cellsGoal);
+    let goal_state = [];
+    cellsGoal.forEach(cell => goal_state.push(cell.value));
+
+    let error_name = "";
+    for (let index = 0; index < goal_state.length; index++) {
+        const value = goal_state[index];
+        if (value === "") {
+            error_name = CONST.VALUE_IS_NOT_FILLED;
+            break;
+        }
+
+        if (!isNumber(value)) {
+            error_name = CONST.VALUE_IS_NOT_A_NUMBER;
+            console.log(value);
+            break;
+        }
+    }
+
+    if (error_name === "") {
+        if (!isContinousArray(goal_state)) {
+            error_name = CONST.INPUT_IS_NOT_VALID;
+        }
+    }
+
+    showMessageError(error_name, "goal");
+
+    const okButton = document.querySelector('.ok-table-goal');
     if (error_name === "") {
         okButton.classList.remove('disabled');
     }
@@ -222,9 +325,14 @@ function cellClick() {
     }
 }
 
-function createRandomStateEvent() {
-    board_game.createRandomState();
+function createRandomStateInputEvent() {
+    board_game.createRandomStateInput();
     updateBoardGame();
+}
+
+function createRandomStateGoalEvent() {
+    board_game.createRandomStateGoal();
+    updateBoardGoal();
 }
 
 function updateSizeBoardGameEvent() {
@@ -232,9 +340,13 @@ function updateSizeBoardGameEvent() {
     updateBoardGame();
     updateBoardGoal();
     updateTableInputState();
-    showMessageError("");
-    const okButton = document.querySelector('.ok-table-input');
-    okButton.classList.add('disabled');
+    updateTableGoalState();
+    showMessageError("", "input");
+    showMessageError("", "goal");
+    const okButtonInput = document.querySelector('.ok-table-input');
+    const okButtonGoal = document.querySelector('.ok-table-goal');
+    okButtonInput.classList.add('disabled');
+    okButtonGoal.classList.add('disabled');
 }
 
 function keyboardEvent(event) {
@@ -245,6 +357,10 @@ function keyboardEvent(event) {
         
         case 'i': case 'I':
             table_input_state.click();
+            break;
+
+        case 's': case 'S':
+            table_goal_state.click();
             break;
     }
 }

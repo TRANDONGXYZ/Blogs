@@ -49,7 +49,7 @@ class Board {
         this.goal_state = initState;
     }
 
-    createRandomState() {
+    createRandomStateInput() {
         let randomArray = [];
         for (let i = 0; i < this.rows_size; i++) {
             for (let j = 0; j < this.columns_size; j++) {
@@ -68,6 +68,27 @@ class Board {
 
         this.input_state = randomState;
         this.current_state = randomState;
+        // console.log(randomState);
+    }
+
+    createRandomStateGoal() {
+        let randomArray = [];
+        for (let i = 0; i < this.rows_size; i++) {
+            for (let j = 0; j < this.columns_size; j++) {
+                randomArray.push(i * this.columns_size + j);
+            }
+        }
+        this.shuffleArray(randomArray);
+
+        let randomState = [];
+        for (let i = 0; i < this.rows_size; i++) {
+            randomState.push([]);
+            for (let j = 0; j < this.columns_size; j++) {
+                randomState[i].push(randomArray[i * this.columns_size + j]);
+            }
+        }
+
+        this.goal_state = randomState;
         // console.log(randomState);
     }
 
@@ -100,7 +121,7 @@ export let board_game = new Board();
 export function updateSizeBoardGame() {
     let size_board_game_input = getSizeBoardFromInput();
     board_game = new Board(size_board_game_input.rows_size, size_board_game_input.columns_size);
-    board_game.createRandomState();
+    board_game.createRandomStateInput();
     board_game.createDefaultGoalState();
 }
 

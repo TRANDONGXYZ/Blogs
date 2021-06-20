@@ -65,9 +65,9 @@
                             <label for="input-size-rows" class="form-label">Rows x Columns</label>
                             <div class="input-group">
                                 <input type="text" class="form-control text-center input-size" id="input-size-rows"
-                                    placeholder="<= 10" value="10" required>
+                                    placeholder="<= 6" value="2" required>
                                 <input type="text" class="form-control text-center input-size" id="input-size-columns"
-                                    placeholder="<= 10" value="10" required>
+                                    placeholder="<= 6" value="2" required>
                             </div>
                         </div>
                         <div class="col-xl-12 col-md-6">
@@ -85,8 +85,8 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Input State"
                                     aria-label="Recipient's username with two button addons">
-                                <button class="btn btn-secondary table-input-state" type="button">Table</button>
-                                <button class="btn btn-info randomButton" type="button">Random</button>
+                                <button class="btn btn-secondary table-input-state-button" type="button">Table</button>
+                                <button class="btn btn-info randomButtonInput" type="button">Random</button>
                             </div>
                         </div>
                         <div class="col-xl-12 col-md-6">
@@ -94,8 +94,8 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Goal State"
                                     aria-label="Recipient's username with two button addons">
-                                <button class="btn btn-secondary" type="button">Table</button>
-                                <button class="btn btn-info randomButton" type="button">Random</button>
+                                <button class="btn btn-secondary table-goal-state-button" type="button">Table</button>
+                                <button class="btn btn-info randomButtonGoal" type="button">Random</button>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -182,7 +182,7 @@
         <div class="input-state">
             <div class="input-state-header">
                 <h5>Set Input State</h5>
-                <img src="./img/close-button.svg" class="close-button">
+                <img src="./img/close-button.svg" class="close-button-input">
             </div>
         
             <div class="input-state-body"></div>
@@ -190,6 +190,23 @@
             <div class="input-state-footer d-flex justify-content-between align-items-center">
                 <h6 style="color: yellowgreen" class="input-error-alert me-3"></h6>
                 <button class="btn btn-outline-dark ok-table-input disabled">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Goal State -->
+    <div class="wrapper-table-goal">
+        <div class="goal-state">
+            <div class="goal-state-header">
+                <h5>Set Goal State</h5>
+                <img src="./img/close-button.svg" class="close-button-goal">
+            </div>
+    
+            <div class="goal-state-body"></div>
+    
+            <div class="goal-state-footer d-flex justify-content-between align-items-center">
+                <h6 style="color: yellowgreen" class="goal-error-alert me-3"></h6>
+                <button class="btn btn-outline-dark ok-table-goal disabled">OK</button>
             </div>
         </div>
     </div>

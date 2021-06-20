@@ -1,3 +1,5 @@
+/* background-color: rgb(230, 235, 235); */
+
 * {
     margin: 0;
     padding: 0;
@@ -120,9 +122,9 @@ html::-webkit-scrollbar-thumb {
 .input-state {
     max-width: 700px;
     padding: 10px;
-    
-    background-color: transparent;
-    backdrop-filter: blur(50px);
+    /* background-color: rgb(230, 235, 235); */
+    background-color: rgb(234, 240, 242);
+    /* backdrop-filter: blur(50rem); */
     border-radius: 10px;
     z-index: 1000000;
     transition: 0.4s;
@@ -133,23 +135,13 @@ html::-webkit-scrollbar-thumb {
     transform: translateY(0) scale(1);
 }
 
-@keyframes name {
-    90% {
-        transform: rotateX(-10deg);
-    }
-
-    100% {
-        transform: translateY(0) scale(1);
-    }
-}
-
 .input-state-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.close-button {
+.close-button-input {
     cursor: pointer;
 }
 
@@ -165,6 +157,76 @@ html::-webkit-scrollbar-thumb {
     border-color: maroon;
     opacity: 0.7;
 }
+
+
+
+
+
+.wrapper-table-goal {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    display: flex;
+    transition: 0.4s;
+    z-index: 1000000;
+    padding: 10px;
+}
+
+.wrapper-table-goal.open {
+    top: 0;
+}
+
+.goal-state {
+    max-width: 700px;
+    padding: 10px;
+    /* background-color: rgb(230, 235, 235); */
+    background-color: rgb(234, 240, 242);
+    /* backdrop-filter: blur(50rem); */
+    border-radius: 10px;
+    z-index: 1000000;
+    transition: 0.4s;
+    transform: translateY(-100vh) scale(0);
+}
+
+.goal-state.open {
+    transform: translateY(0) scale(1);
+}
+
+.goal-state-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button-goal {
+    cursor: pointer;
+}
+
+.goal-state-body {
+    margin: 20px 0;
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr); */
+    grid-gap: 10px;
+}
+
+.cell-input-goal {
+    border-color: maroon;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1200px) {
     .board {
